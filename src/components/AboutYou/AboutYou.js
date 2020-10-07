@@ -8,7 +8,8 @@ class AboutYou extends Component {
   constructor(props){
     super(props);
     this.state = {
-      
+      title:"About You",
+      text:"Tell us a bit about yourself",
     };
   }
 
@@ -16,8 +17,8 @@ class AboutYou extends Component {
   render() {
     return (
       <div>
-          <Head title={this.props.title}/>
-          <Main text={this.props.text}/>
+          <Head title={this.state.title}/>
+          <Main text={this.state.text}/>
           <Foot/>
       </div>
     );

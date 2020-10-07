@@ -15,9 +15,9 @@ class FormCA extends Component {
       <div>
         <form action="POST">
           <label htmlFor="email">Email: </label>
-          <input type="text" value={this.state.email}/> <br/>
+          <input type="text" value={this.state.email}/> <br/><br/>
           <label htmlFor="password">Password: </label>
-          <input type="text" value={this.state.password}/> <br/>
+          <input type="text" value={this.state.password}/> <br/><br/>
           <input type="button" value="GET STARTED"/>
         </form>
       </div>

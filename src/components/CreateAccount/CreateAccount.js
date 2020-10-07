@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import './CreateAccount.css';
-import Head from '../Head/Head'
-import Main from '../Main/Main'
-import Foot from '../Foot/Foot'
+import Head from '../Head/Head';
+import Main from '../Main/Main';
+import Foot from '../Foot/Foot';
+import FormCA from '../FormCA/FormCA';
+import {Link} from 'react-router-dom';
 
 class CreateAccount extends Component {
   constructor(props){
     super(props);
     this.state = {
-        logo: "./img/pomodoro.png",
+
+      title:"Create Account",
+      btnFB: <a href="#">Login with Facebook</a>,
+      btnG: <a href="#">Login with Google</a>,
+      form: FormCA
     };
   }
 
@@ -16,8 +22,8 @@ class CreateAccount extends Component {
   render() {
     return (
       <div>
-        <Head title={this.props.title}/>
-        <Main logo={this.state.logo}/>
+        <Head title={this.state.title} />
+        <Main form={this.state.form}/>
         <Foot/>
       </div>
     );

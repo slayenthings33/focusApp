@@ -1,19 +1,25 @@
 import React from 'react';
 import './App.css';
+import {BrowserRouter,Switch,Link, Route} from "react-router-dom"
 import CreateAccount from "./components/CreateAccount/CreateAccount";
 import AboutYou from "./components/AboutYou/AboutYou";
 import Activities from "./components/Activities/Activities";
 import AppBehavior from "./components/AppBehavior/AppBehavior";
 import PrincipalPage from "./components/PrincipalPage/PrincipalPage";
-
+import WelcomePage from "./components/WelcomePage/WelcomePage";
 
 
 function App() {
   return (
     <div className="App">
-      <CreateAccount title="Create Account" />
+      <BrowserRouter>
 
-      <AboutYou title="About You" text="Tell us a bit about yourself"/>
+        <Switch>
+          <Route exact path="/" component={WelcomePage}/>
+          <Route  path="/CreateAccount" component={CreateAccount}/>
+        </Switch> 
+      </BrowserRouter>
+      <AboutYou />
 
       <Activities title="Activities" text="How would you like to spend your breaks?"/>
 
@@ -32,15 +38,13 @@ export default App;
 // LOGIN PAGE
 
 // App
-//     CreateAccount
+//     WelcomePage
 //         Head
-//             h1
-//         Main
-//             logo
-//             Form
-//                  form
-//         Foot
-//             button*2
+          //      h1
+//         Main 
+//             h2 
+//         Foot 
+//             button 
 //     AboutYou
 //         Head
 //             h1
