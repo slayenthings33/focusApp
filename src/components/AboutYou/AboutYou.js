@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './AboutYou.css';
 import Head from '../Head/Head'
-import Main from '../Main/Main'
+import MainAbY from './MainAbY/MainAbY'
 import Foot from '../Foot/Foot'
 
 class AboutYou extends Component {
@@ -17,8 +17,8 @@ class AboutYou extends Component {
   render() {
     return (
       <div>
-          <Head title={this.state.title}/>
-          <Main text={this.state.text}/>
+          <Head title={this.state.title} text={this.state.text}/>
+          <MainAbY/>
           <Foot/>
       </div>
     );

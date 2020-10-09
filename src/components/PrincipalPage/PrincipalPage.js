@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './PrincipalPage.css';
 import Head from '../Head/Head'
-import Main from '../Main/Main'
+// import MainPP from '../MainPP/MainPP'
 import Foot from '../Foot/Foot'
 
 class PrincipalPage extends Component {
@@ -15,7 +15,7 @@ class PrincipalPage extends Component {
     return (
       <div>
         <Head title={this.props.title}/>
-        <Main/>
+        {/* <MainPP/> */}
         <Foot/>
       </div>
     );

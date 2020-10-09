@@ -6,7 +6,7 @@ class Head extends Component {
     super(props);
     this.state = {
       title:this.props.title,
-      
+      text:this.props.text,
     };
   }
 
@@ -14,7 +14,7 @@ class Head extends Component {
     return (
    <div>
      <h1>{this.state.title}</h1>
-     
+     <p>{this.state.text}</p>
    </div>
     );
   }
