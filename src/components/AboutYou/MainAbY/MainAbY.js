@@ -5,18 +5,18 @@ import './MainAbY.css';
 class MainAbY extends Component {
   constructor(props){
     super(props);
-    this.state = {};
+    this.state = {
+      arrow: "/img/continueArrow.png",
+    };
   }
 
 
   render() {
     return (
       <div class="formContainer">
-        <form onSubmit={this.mySubmitHandler }>
-          <p>Your name:</p>
+        <form id="aboutYouForm" onSubmit={this.mySubmitHandler }>
+          <p class="pageText">What you would like to be called:</p>
           <input type='text' name='name' onChange={this.myChangeHandler}/><br/><br/>
-          <input type="submit" value="send"/>
-          {this.state.errorMessage?<p>{this.state.errorMessage}</p>:"" }
         </form>
       </div>
     );

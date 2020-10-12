@@ -1,7 +1,15 @@
 /*
  * MainWP css File
 */
-
-.MainWP {
-    /* propertys here */
+#logo{
+    margin: 0px;
+    padding: 10px;
+    width: 90%;
+}
+.mainFont {
+    margin: 40px;
+}
+#welcomeText {
+    padding: 20px;
+    font-size: 22px;
 }

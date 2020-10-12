@@ -6,7 +6,7 @@ class MainWP extends Component {
     super(props);
     this.state = {
       logo: "/img/LogoBlack.jpg",
-      text:"Welcome to UpBreak, a personalized productivity application for remote workers.",
+      text:"A productivity application designed to improve the remote working experience.",
     };
   }
 
@@ -14,9 +14,10 @@ class MainWP extends Component {
 
   render() {
     return (
-      <div>
+      <div id="welcomeContainer">
+        <h2>{this.state.title}</h2>
         <img id="logo" src={this.state.logo} alt="Logo"/>
-        <p> {this.state.text}</p>
+        <h4 id="welcomeText" class="mainFont"> {this.state.text}</h4>
       </div>
     );
   }

@@ -9,18 +9,18 @@ class AboutYou extends Component {
     super(props);
     this.state = {
       title:"About You",
-      text:"Tell us a bit about yourself",
+      link: this.props.link,
     };
   }
 
 
   render() {
     return (
-      <div>
-          <Head title={this.state.title} text={this.state.text}/>
-          <MainAbY/>
-          <Foot/>
-      </div>
+        <div>
+            <Head title={this.state.title} />
+            <MainAbY/>
+            <Foot link= {this.state.link}/>
+        </div>
     );
   }
 }

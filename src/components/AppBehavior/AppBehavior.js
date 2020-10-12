@@ -8,17 +8,19 @@ class AppBehavior extends Component {
   constructor(props){
     super(props);
     this.state = {
-      text: "Select your Productivity Method"
+      title: "Method Personalization",
     };
   }
 
   render() {
     return (
-      <div>
-        <Head title={this.props.title} text={this.state.text}/>
-        <MainAppBe/>
-        <Foot/>
-      </div>
+      <body>
+        <div>
+          <Head title={this.state.title}/>
+          <MainAppBe/>
+          <Foot/>
+        </div>
+      </body>
     );
   }
 }

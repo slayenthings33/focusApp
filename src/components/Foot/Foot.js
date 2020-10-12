@@ -1,34 +1,44 @@
 import React, { Component } from 'react';
 import './Foot.css';
-import {Switch,Route} from "react-router-dom";
-import CreateAccount from '../CreateAccount/CreateAccount';
-import UserChoice from '../UserChoice/UserChoice';
-import AboutYou from '../AboutYou/AboutYou';
-import Activities from '../Activities/Activities';
-import AppBehavior from '../AppBehavior/AppBehavior';
-import PrincipalPage from '../PrincipalPage/PrincipalPage';
+import {Link} from "react-router-dom";
+
+const paths = ["/","/AboutYou","/Activities","/UserChoice", "/AboutUs","/AppBehavior", "/PrincipalPage", "/GraphPage"];
+
+function getLocation() {
+  return window.location.href;  
+}
+
+function currentPath() {
+  let url= getLocation();
+  let parsedUrl = url.split("/");
+  return `/${parsedUrl[3]}`;
+};
+function nextPage() { 
+  let currentUrl = currentPath();
+  console.log(currentUrl);  
+  let pathIndex = paths.findIndex((e)=>{
+    return e===currentUrl;
+  });
+  console.log(pathIndex); 
+  let nextPath = paths[pathIndex+1];
+  return nextPath;
+}
 
 class Foot extends Component {
   constructor(props){
     super(props);
     this.state = {
-    
+      link:this.props.link,
+      arrow: "/img/continueArrow.png",
     };
   }
 
 
   render() {
+    console.log(this.state.link);
     return (
-      <div id="btnContainer">
-        {/* <Switch>
-          <Route exact path="/CreateAccount" componennt={CreateAccount}/>
-          <Route path="/AboutYou" component={AboutYou} />
-          <Route path="/Activities" component={Activities} />
-          <Route path="/AppBehavior" component={AppBehavior} />
-          <Route path="/UserChoice" component={UserChoice} />
-          <Route path="/PrincipalPage" component={PrincipalPage} />
-        </Switch> */}
-
+      <div id="footContainer">
+       <Link to={nextPage} class="nextPageBtn"><img src={this.state.arrow} alt="next button"/></Link>
       </div>
     );
   }

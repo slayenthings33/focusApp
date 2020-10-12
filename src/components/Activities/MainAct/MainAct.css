@@ -2,6 +2,34 @@
  * MainAct css File
 */
 
-.MainAct {
-    /* propertys here */
+.formContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -20px;
 }
+
+.checkboxInput {
+    display:none;
+}
+
+.formImage {
+    margin: 6px 18px 6px 18px;
+    padding: 10px;
+    width: 14%;    
+    border: black solid 1px;
+    border-radius: 20px;
+ }
+/* .labelContainer {
+    margin: 0px;
+    padding: 10px;
+    height: 500px;
+    width: 100%;
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: orangered dotted 1px;
+
+} */

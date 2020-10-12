@@ -6,16 +6,16 @@ class Head extends Component {
     super(props);
     this.state = {
       title:this.props.title,
-      text:this.props.text,
+      text:this.props.text
     };
   }
 
   render() {
     return (
-   <div>
-     <h1>{this.state.title}</h1>
-     <p>{this.state.text}</p>
-   </div>
+        <div id="headContainer">
+          <h1 class="mainFont">{this.state.title}</h1>
+          <p id="activitiesText" class="mainFont">{this.state.text}</p>
+        </div>
     );
   }
 }

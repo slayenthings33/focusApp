@@ -1,0 +1,47 @@
+/*
+ * MainUC css File
+*/
+#contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: red dotted 1px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 354px;
+
+}
+
+#fakeImg {
+    height: 200px;
+    width:90%;
+    border: blue dotted 2px;
+    border-radius: 20px;
+}
+
+.ucBtns {
+    margin: 10px 20px -40px;
+    padding: 10px;
+    border: black solid 1px;
+    border-radius: 20px;
+    position: relative;
+    top: 30px;
+}
+
+#ucImgTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    border: dotted red 1px;
+    padding: 10px 20px 0px 10px;
+}
+
+#content {
+    border-radius: 15px;
+    margin: 10px;
+    width: 300px;
+    height: 230px;
+    position: relative;
+    margin-top: -70px;
+}

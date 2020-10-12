@@ -1,22 +1,12 @@
-
-
-/* Color Theme Swatches in Hex */
-.Blue-focus-1-hex { color: #3495C2; }
-.Blue-focus-2-hex { color: #C7EDFF; }
-.Blue-focus-3-hex { color: #AEE6FF; }
-.Blue-focus-4-hex { color: #C28946; }
-.Blue-focus-5-hex { color: #FFDAAD; }
-
-/* Color Theme Swatches in RGBA */
-.Blue-focus-1-rgba { color: rgba(52, 149, 193, 1); }
-.Blue-focus-2-rgba { color: rgba(198, 237, 255, 1); }
-.Blue-focus-3-rgba { color: rgba(174, 230, 255, 1); }
-.Blue-focus-4-rgba { color: rgba(193, 137, 70, 1); }
-.Blue-focus-5-rgba { color: rgba(255, 218, 172, 1); }
-
-/* Color Theme Swatches in HSLA */
-.Blue-focus-1-hsla { color: hsla(199, 57, 48, 1); }
-.Blue-focus-2-hsla { color: hsla(199, 100, 89, 1); }
-.Blue-focus-3-hsla { color: hsla(198, 100, 84, 1); }
-.Blue-focus-4-hsla { color: hsla(32, 50, 51, 1); }
-.Blue-focus-5-hsla { color: hsla(32, 100, 83, 1); }
+#footContainer {
+    display: flex;
+    margin: 0px;
+    /* margin-top: -20px; */
+    padding: 0px;
+    height: 140px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: fuchsia dotted 1px;
+}

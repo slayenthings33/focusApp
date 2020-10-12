@@ -2,6 +2,8 @@
  * Head css File
 */
 
-.Head {
-    /* propertys here */
+#activitiesText {
+    position: relative;
+    margin-top: -28px;
 }
+

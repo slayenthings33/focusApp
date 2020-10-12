@@ -9,18 +9,18 @@ class Activities extends Component {
     super(props);
     this.state = {
       text: "How you would like to spend your breaks",
+      link: this.props.link,
     };
   }
 
 
-
   render() {
     return (
-      <div>
-        <Head title={this.props.title} text={this.state.text}/>
-        <MainAct/>
-        <Foot/>
-      </div>
+        <div>
+          <Head title={this.props.title} text={this.state.text}/>
+          <MainAct/>
+          <Foot link={this.state.link}/>
+        </div>
     );
   }
 }

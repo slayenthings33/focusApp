@@ -5,3 +5,11 @@
 .MainAppBe {
     /* propertys here */
 }
+.formContainer {
+    height: 394px;
+    border: red dotted 1px;
+    position: relative;
+}
+.formContainer p {
+    font-size: 25px;
+}

@@ -5,3 +5,7 @@
 .MainPP {
     /* propertys here */
 }
+#principalContainer{
+    height: 394px;
+    width: 100%;
+}

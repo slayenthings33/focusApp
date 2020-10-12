@@ -1,5 +1,17 @@
+.pageText{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.mainFont {
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+
 .App {
   text-align: center;
+  
+  
 }
 
 .App-logo {
