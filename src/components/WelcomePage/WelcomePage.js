@@ -10,7 +10,7 @@ class WelcomePage extends Component {
     super(props);
     this.state = {
       title:"Welcome to",
-      logo:"/img/LogoBlack.png",
+      // logo:"/img/logoBlack.svg",
       link: this.props.link,
     
     };

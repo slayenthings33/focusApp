@@ -38,7 +38,7 @@ class Foot extends Component {
     // console.log(this.state.link);
     return (
       <div id="footContainer">
-       <Link to={nextPage} classNameName="nextPageBtn"><img src={this.state.arrow} alt="next button"/></Link>
+       <Link to={nextPage} id="nextPageBtn"><img src={this.state.arrow} alt="next button"/></Link>
       </div>
     );
   }

@@ -13,18 +13,14 @@ import AboutUs from './components/AboutUs/AboutUs';
 import DescriptionPage from './components/AboutUs/AboutUs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Firebase App (the core Firebase SDK) is always required
-// and must be listed first
-// import * as firebase from "firebase/app";
-
 // Add the Firebase products that you want to use
 import "firebase/auth";
 import "firebase/firestore";
+import firebaseConfig from './firebase/firebaseConfig';
 
 // import * as firebaseui from "firebaseui";
 
-import firebaseConfig from './firebaseConfig'
-import {FirebaseAppProvider} from 'reactfire'
+import {FirebaseAppProvider} from 'reactfire';
 
 
 
@@ -33,7 +29,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <FirebaseAppProvider>  
+          <FirebaseAppProvider firebaseConfig={firebaseConfig}>  
             <Route exact path="/" link ={<Link to='/WelcomePage'>Welcome Page</Link>}>
               <WelcomePage title="Welcome to"/> 
             </Route>
@@ -55,7 +51,6 @@ function App() {
             <Route exact path="/AppBehavior" link ={<Link to='/AppBehavior'>App Behavior</Link>}>
               <AppBehavior/> 
             </Route>
-            
             <Route exact path="/PrincipalPage" link ={<Link to='/PrincipalPage'>Principal Page</Link>}>
               <PrincipalPage/> 
             </Route>
