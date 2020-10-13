@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Foot.css';
 import {Link} from "react-router-dom";
 
-const paths = ["/","/AboutYou","/Activities","/UserChoice", "/AboutUs","/AppBehavior", "/PrincipalPage", "/GraphPage"];
+const paths = ["/", "/CreateAccount","/AboutYou","/Activities","/UserChoice", "/AboutUs","/AppBehavior", "/PrincipalPage", "/GraphPage"];
 
 function getLocation() {
   return window.location.href;  
@@ -15,11 +15,11 @@ function currentPath() {
 };
 function nextPage() { 
   let currentUrl = currentPath();
-  console.log(currentUrl);  
+  // console.log(currentUrl);  
   let pathIndex = paths.findIndex((e)=>{
     return e===currentUrl;
   });
-  console.log(pathIndex); 
+  // console.log(pathIndex); 
   let nextPath = paths[pathIndex+1];
   return nextPath;
 }
@@ -35,10 +35,10 @@ class Foot extends Component {
 
 
   render() {
-    console.log(this.state.link);
+    // console.log(this.state.link);
     return (
       <div id="footContainer">
-       <Link to={nextPage} class="nextPageBtn"><img src={this.state.arrow} alt="next button"/></Link>
+       <Link to={nextPage} classNameName="nextPageBtn"><img src={this.state.arrow} alt="next button"/></Link>
       </div>
     );
   }

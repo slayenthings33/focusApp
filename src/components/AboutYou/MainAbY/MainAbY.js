@@ -13,9 +13,9 @@ class MainAbY extends Component {
 
   render() {
     return (
-      <div class="formContainer">
+      <div className="formContainer">
         <form id="aboutYouForm" onSubmit={this.mySubmitHandler }>
-          <p class="pageText">What you would like to be called:</p>
+          <p className="pageText">What you would like to be called:</p>
           <input type='text' name='name' onChange={this.myChangeHandler}/><br/><br/>
         </form>
       </div>

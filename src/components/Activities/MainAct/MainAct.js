@@ -20,47 +20,47 @@ class MainAct extends Component {
 
   render() {
     return (
-      <div class="formContainer">
+      <div className="formContainer">
         <form >
-          <label class="labelContainer">
-            <img class="formImage" src="/img/yoga.png" alt=""/>
-            <input class="checkboxInput" name="yoga"
+          <label className="labelContainer">
+            <img className="formImage" src="/img/yoga.png" alt=""/>
+            <input className="checkboxInput" name="yoga"
               type="checkbox"
               checked={this.state.unselected}
               onChange={this.toggleInput} />
           </label>
-          <label class="labelContainer">
-            <img class="formImage" src="/img/meditate.png" alt=""/>
-            <input name="meditation" class="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput}/>
+          <label className="labelContainer">
+            <img className="formImage" src="/img/meditate.png" alt=""/>
+            <input name="meditation" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput}/>
           </label>
           <br/>
           <label>
-            <img src="/img/exercise.png" alt="" className="formImage"/>
-            <input name="exercise" class="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput}/>
+            <img src="/img/exercise.png" alt="" classNameName="formImage"/>
+            <input name="exercise" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput}/>
           </label>
           <label>
-            <img src="/img/podcast.png" alt="" className="formImage"/>
-            <input name="podcast" class="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput} />
+            <img src="/img/podcast.png" alt="" classNameName="formImage"/>
+            <input name="podcast" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput} />
           </label>
           <br/>
           <label>
-            <img src="/img/nap.png" alt="" className="formImage"/>
-            <input name="nap" class="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput} />
+            <img src="/img/nap.png" alt="" classNameName="formImage"/>
+            <input name="nap" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput} />
           </label>
           <label>
-            <img src="/img/breathe.png" alt="" className="formImage"/>
-            <input class="checkboxInput" name="breathwork" type="checkbox"
+            <img src="/img/breathe.png" alt="" classNameName="formImage"/>
+            <input className="checkboxInput" name="breathwork" type="checkbox"
               checked={this.state.unselected}
               onChange={this.toggleInput} />
           </label>
           <br/>
           <label>
-            <img src="/img/walk.png" alt="" className="formImage"/>
-            <input name="walk" class="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput} />
+            <img src="/img/walk.png" alt="" classNameName="formImage"/>
+            <input name="walk" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput} />
           </label>
         <label>
-            <img src="/img/news.png" alt="" className="formImage"/>
-            <input class="checkboxInput" name="news" type="checkbox" checked={this.state.unselected}
+            <img src="/img/news.png" alt="" classNameName="formImage"/>
+            <input className="checkboxInput" name="news" type="checkbox" checked={this.state.unselected}
               onChange={this.toggleInput} />
           </label>
         </form>

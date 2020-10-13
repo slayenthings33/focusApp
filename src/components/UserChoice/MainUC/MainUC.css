@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: red dotted 1px;
+    /* border: red dotted 1px; */
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -15,6 +15,7 @@
 }
 
 #fakeImg {
+    margin-top: 25px;
     height: 200px;
     width:90%;
     border: blue dotted 2px;
@@ -22,18 +23,19 @@
 }
 
 .ucBtns {
-    margin: 10px 20px -40px;
+    height: 50px;
+    margin: 10px 20px;
     padding: 10px;
     border: black solid 1px;
     border-radius: 20px;
     position: relative;
-    top: 30px;
+    top: 50px;
 }
 
 #ucImgTitle {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-    border: dotted red 1px;
+    /* border: dotted red 1px; */
     padding: 10px 20px 0px 10px;
 }
 

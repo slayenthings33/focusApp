@@ -17,7 +17,7 @@ class MainWP extends Component {
       <div id="welcomeContainer">
         <h2>{this.state.title}</h2>
         <img id="logo" src={this.state.logo} alt="Logo"/>
-        <h4 id="welcomeText" class="mainFont"> {this.state.text}</h4>
+        <h4 id="welcomeText" className="mainFont"> {this.state.text}</h4>
       </div>
     );
   }

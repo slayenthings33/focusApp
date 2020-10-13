@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './FormDefBeh.css';
 
-class FormDefBeh extends Component {
+className FormDefBeh extends Component {
   // constructor(props){
     // super(props);
     // this.state = {};

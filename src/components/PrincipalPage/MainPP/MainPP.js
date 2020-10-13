@@ -10,7 +10,7 @@ class MainPP extends Component {
   render() {
     return (
       <div id="principalContainer">
-        
+
       </div>
     );
   }

@@ -1,0 +1,23 @@
+/*
+ * MainCA css File
+*/
+
+
+#btnContainer {
+    height: 90px;
+    /* border: dotted red 1px; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.caIcons {
+    margin: 10px;
+    padding: 10px;
+    border: solid black 1px;
+    border-radius: 24px;
+}
+
+.caInput {
+    margin: 15px;
+}

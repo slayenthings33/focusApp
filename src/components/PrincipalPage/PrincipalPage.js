@@ -10,15 +10,24 @@ class PrincipalPage extends Component {
     super(props);
     this.state = {
       quote: "This is a very motivating quote",
+      count: 0,
     };
+    this.touchAdd=this.touchAdd.bind(this)
   }
-
+  touchAdd = () => {
+    this.setState(
+      {count: this.state.count + 1}
+    )
+    console.log(this.state.count)
+  }
 
   render() {
     return (
-        <div>
+        <div onClick={this.touchAdd} id="principalPage" >
+        
           <Head title={this.state.quote}/>
-          <MainPP/>
+    <h1>{this.state.count}</h1>
+          <MainPP/> 
           <Foot/>
         </div>
     );

@@ -12,10 +12,10 @@ class MainAppBe extends Component {
 
   render() {
     return (
-      <div class="formContainer">
+      <div className="formContainer">
       <form onSubmit={this.mySubmitHandler }>
-        <p class="mainFont">How many hours will you be working today?</p>
-        <input class="formInput" type='text' name='name' onChange={this.myChangeHandler}/><br/><br/>
+        <p className="mainFont">How many hours will you be working today?</p>
+        <input className="formInput" type='text' name='name' onChange={this.myChangeHandler}/><br/><br/>
       </form>
     </div>
     );

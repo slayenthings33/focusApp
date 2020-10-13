@@ -17,8 +17,8 @@ class MainUC extends Component {
         </div>
         <p id="ucImgTitle">The title is - This</p>
         </div>
-        <div id="buttonContainer">
-          <img class="ucBtns" src="/img/like.png" alt=""/><img class="ucBtns" src="/img/dislike.png" alt=""/>
+        <div id="btnContainer">
+          <img className="ucBtns" src="/img/like.png" alt=""/><img className="ucBtns" src="/img/dislike.png" alt=""/>
         </div>
       </div>
     );

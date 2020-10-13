@@ -13,8 +13,8 @@ class Head extends Component {
   render() {
     return (
         <div id="headContainer">
-          <h1 class="mainFont">{this.state.title}</h1>
-          <p id="activitiesText" class="mainFont">{this.state.text}</p>
+          <h1 className="mainFont">{this.state.title}</h1>
+          <p id="activitiesText" className="mainFont">{this.state.text}</p>
         </div>
     );
   }
