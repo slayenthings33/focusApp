@@ -14,7 +14,7 @@ class CreateAccount extends Component {
 
   render() {
     return (
-      <div>
+      <div class="page">
         <Head title={this.state.title}/>
         <MainCA/>
         <Foot/>

@@ -16,7 +16,7 @@ class GraphPage extends Component {
 
   render() {
     return (
-        <div>
+        <div class="page">
           <Head text={this.state.text}/>
           <MainGP/>
           <Foot/>

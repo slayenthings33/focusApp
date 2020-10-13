@@ -15,7 +15,7 @@ class AppBehavior extends Component {
   render() {
     return (
       <body>
-        <div>
+        <div class="page">
           <Head title={this.state.title}/>
           <MainAppBe/>
           <Foot/>

@@ -20,7 +20,7 @@ class MainCA extends Component {
     // });
 
     return (
-      <div className="formContainer">
+      <div className="formCaContainer">
           <form id="caForm" onSubmit={this.mySubmitHandler }>
           <p className="pageText">Email:</p>
           <input type='text' name='email' className="caInput"/><br/><br/>
@@ -29,8 +29,8 @@ class MainCA extends Component {
           <input id="caBtn" type="submit" value="Submit"/>
         </form>
         <div id="btnContainer">
-          <img src="img/facebookIcon.png" alt="login with facebook" classNameName="caIcons"/>
-          <img src="/img/googleIcon.png" alt="login with google" classNameName="caIcons"/>
+          <img src="img/facebookIcon.png" alt="login with facebook" className="caIcons"/>
+          <img src="/img/googleIcon.png" alt="login with google" className="caIcons"/>
         </div>
       </div>
     );

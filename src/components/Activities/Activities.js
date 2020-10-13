@@ -16,7 +16,7 @@ class Activities extends Component {
 
   render() {
     return (
-        <div>
+        <div class="page">
           <Head title={this.props.title} text={this.state.text}/>
           <MainAct/>
           <Foot link={this.state.link}/>

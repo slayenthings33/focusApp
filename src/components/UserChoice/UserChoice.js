@@ -15,7 +15,7 @@ class UserChoice extends Component {
 
   render() {
     return (
-        <div>
+        <div class="page">
           <Head title="Are you likely to enjoy this content?"/>
           <MainUC/>
           <Foot/>

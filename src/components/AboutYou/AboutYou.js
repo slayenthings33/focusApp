@@ -16,7 +16,7 @@ class AboutYou extends Component {
 
   render() {
     return (
-        <div>
+        <div class="page">
             <Head title={this.state.title} />
             <MainAbY/>
             <Foot link= {this.state.link}/>

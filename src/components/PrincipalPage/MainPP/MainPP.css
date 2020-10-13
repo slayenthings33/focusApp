@@ -6,6 +6,13 @@
     /* propertys here */
 }
 #principalContainer{
-    height: 394px;
+    display: flex;
+    justify-content: center;
+    height: 250px;
     width: 100%;
+}
+#progressBar {
+    position: relative;
+    top: 150px;
+    width: 80%;
 }
