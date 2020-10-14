@@ -18,7 +18,7 @@ class WelcomePage extends Component {
 
 render() {    
   return (
-      <div class="page">
+      <div className="page">
         <Head title={this.state.title}/>
         <MainWP/>
         <Foot link={this.state.link}/>

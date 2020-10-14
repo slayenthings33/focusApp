@@ -22,7 +22,7 @@ class MainAct extends Component {
     return (
       <div >
         <form className="formActContainer">
-          <div class="rowContainer">
+          <div className="rowContainer">
             <label className="labelContainer">
             <img className="formImage" src="/img/yoga.png" alt=""/>
             <input className="checkboxInput" name="yoga"
@@ -35,7 +35,7 @@ class MainAct extends Component {
             <input name="meditation" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput}/>
           </label>
           </div>
-          <div class="rowContainer">
+          <div className="rowContainer">
           <label className="labelContainer">
             <img src="/img/exercise.png" alt="" className="formImage"/>
             <input name="exercise" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput}/>
@@ -45,21 +45,20 @@ class MainAct extends Component {
             <input name="podcast" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput} />
           </label>
           </div>
-         
-          <div class="rowContainer">
+          <div className="rowContainer">
           <label className="labelContainer">
             <img src="/img/nap.png" alt="" className="formImage"/>
             <input name="nap" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput} />
           </label>
           <label className="labelContainer">
-            <img src="/img/breathe.png" alt="" className="formImage"/>
-            <input className="checkboxInput" name="breathwork" type="checkbox"
+            <img src="/img/smart.png" alt="" className="formImage"/>
+            <input className="checkboxInput" name="smartVids" type="checkbox"
               checked={this.state.unselected}
               onChange={this.toggleInput} />
           </label>
           </div>
          
-           <div class="rowContainer">
+           <div className="rowContainer">
           <label className="labelContainer">
             <img src="/img/walk.png" alt="" className="formImage"/>
             <input name="walk" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput} />

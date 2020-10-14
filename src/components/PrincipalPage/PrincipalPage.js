@@ -15,15 +15,16 @@ class PrincipalPage extends Component {
     this.touchAdd=this.touchAdd.bind(this)
   }
   touchAdd = () => {
-    this.setState(
-      {count: this.state.count + 1}
-    )
-    console.log(this.state.count)
+    // if(!nextPageBtn) {
+      this.setState(
+        {count: this.state.count + 1}
+      )
+    // }
   }
 
   render() {
     return (
-        <div class="page" onClick={this.touchAdd} id="principalPage" >
+        <div className="page" onClick={this.touchAdd} id="principalPage" >
           <Head title={this.state.quote}/>
           <h1>{this.state.count}</h1>
           <MainPP/> 
