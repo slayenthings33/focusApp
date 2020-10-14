@@ -9,7 +9,7 @@ class Activities extends Component {
     super(props);
     this.state = {
       text: "How you would like to spend your breaks",
-      link: this.props.link,
+      nextBtn:"/UserChoice",     
     };
   }
 
@@ -19,7 +19,7 @@ class Activities extends Component {
         <div className="page">
           <Head title={this.props.title} text={this.state.text}/>
           <MainAct/>
-          <Foot link={this.state.link}/>
+          <Foot nextBtn={this.state.nextBtn}/>
         </div>
     );
   }

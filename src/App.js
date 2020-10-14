@@ -10,7 +10,6 @@ import WelcomePage from "./components/WelcomePage/WelcomePage";
 import UserChoice from './components/UserChoice/UserChoice';
 import GraphPage from './components/GraphPage/GraphPage';
 import AboutUs from './components/AboutUs/AboutUs';
-import DescriptionPage from './components/AboutUs/AboutUs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Add the Firebase products that you want to use
@@ -46,7 +45,7 @@ function App() {
               <UserChoice title="Are you likely to enjoy this content?"/> 
             </Route>
             <Route exact path="/AboutUs" link ={<Link to='/AboutUs'>About Us</Link>}>
-              <DescriptionPage/> 
+              <AboutUs/> 
             </Route>
             <Route exact path="/AppBehavior" link ={<Link to='/AppBehavior'>App Behavior</Link>}>
               <AppBehavior/> 
@@ -57,9 +56,9 @@ function App() {
             <Route exact path="/GraphPage" link ={<Link to='/GraphPage'>Graph Page</Link>}>
               <GraphPage/> 
             </Route>
-            <Route  path="/AboutUs" component={AboutUs} link={<Link to='/AboutUs'>About Us</Link>}/>
-            <Route  path="/PrincipalPage" component={PrincipalPage}/>
-            <Route  path="/GraphPage" component={GraphPage}/>
+            {/* <Route  path="/AboutUs" component={AboutUs} link={<Link to='/AboutUs'>About Us</Link>}/> */}
+            {/* <Route  path="/PrincipalPage" component={PrincipalPage}/> */}
+            {/* <Route  path="/GraphPage" component={GraphPage}/> */}
           </FirebaseAppProvider>  
         </Switch> 
     </BrowserRouter>
@@ -83,6 +82,14 @@ export default App;
 //             h2 
 //         Foot 
 //             button 
+// CreateAccount
+//         Head
+//             h1 
+//         Main
+//             form
+//             a*2
+//         Foot
+//             button
 //    AboutYou
 //         Head
 //             h1

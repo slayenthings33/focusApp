@@ -8,7 +8,7 @@ class UserChoice extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      nextBtn:"/DescriptionPage",
     };
   }
 
@@ -18,7 +18,7 @@ class UserChoice extends Component {
         <div className="page">
           <Head title="Are you likely to enjoy this content?"/>
           <MainUC/>
-          <Foot/>
+          <Foot nextBtn={this.state.nextBtn}/>
         </div>
     );
   }

@@ -9,6 +9,7 @@ class AppBehavior extends Component {
     super(props);
     this.state = {
       title: "Method Personalization",
+      nextBtn:"/PrincipalPage",
     };
   }
 
@@ -18,7 +19,7 @@ class AppBehavior extends Component {
         <div class="page">
           <Head title={this.state.title}/>
           <MainAppBe/>
-          <Foot/>
+          <Foot nextBtn={this.state.nextBtn}/>
         </div>
       </body>
     );

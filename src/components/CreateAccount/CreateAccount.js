@@ -17,7 +17,7 @@ class CreateAccount extends Component {
       <div className="page">
         <Head title={this.state.title}/>
         <MainCA/>
-        <Foot/>
+        <Foot nextBtn="/AboutYou"/>
       </div>
     );
   }

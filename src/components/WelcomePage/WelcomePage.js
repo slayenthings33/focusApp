@@ -10,8 +10,6 @@ class WelcomePage extends Component {
     super(props);
     this.state = {
       title:"Welcome to",
-      // logo:"/img/logoBlack.svg",
-      link: this.props.link,
     
     };
   }
@@ -21,7 +19,7 @@ render() {
       <div className="page">
         <Head title={this.state.title}/>
         <MainWP/>
-        <Foot link={this.state.link}/>
+        <Foot nextBtn="/CreateAccount"/>
       </div>
     );
   }

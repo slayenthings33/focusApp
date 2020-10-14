@@ -10,14 +10,13 @@ class PrincipalPage extends Component {
     this.state = {
       quote: "This is a very motivating quote",
       count: 0,
-      
+      nextBtn: "/GraphPage",
     };
     this.touchAdd=this.touchAdd.bind(this)
   }
   touchAdd = () => {
-    // if(!nextPageBtn) {
       this.setState(
-        {count: this.state.count + 1}
+        {count: this.state.count + 1},
       )
     // }
   }
@@ -28,7 +27,7 @@ class PrincipalPage extends Component {
           <Head title={this.state.quote}/>
           <h1>{this.state.count}</h1>
           <MainPP/> 
-          <Foot/>
+          <Foot nextBtn={this.state.nextBtn}/>
         </div>
     );
   }

@@ -62,5 +62,4 @@ class MainCA extends Component {
     )
 }}
 
-export default MainCA;
-
+export default MainCA

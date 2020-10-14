@@ -9,7 +9,7 @@ class AboutYou extends Component {
     super(props);
     this.state = {
       title:"About You",
-      link: this.props.link,
+      nextBtn: "/Activities"
     };
   }
 
@@ -19,7 +19,7 @@ class AboutYou extends Component {
         <div className="page">
             <Head title={this.state.title} />
             <MainAbY/>
-            <Foot link= {this.state.link}/>
+            <Foot nextBtn= {this.state.nextBtn}/>
         </div>
     );
   }
