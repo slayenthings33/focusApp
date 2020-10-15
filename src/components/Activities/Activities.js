@@ -9,11 +9,10 @@ class Activities extends Component {
   constructor(props){
     super(props);
     this.state = {
-      text: "How you would like to spend your breaks",
+      text: "How you would like to spend your breaks (Please select at least 3)",
       nextBtn:"/UserChoice",     
     };
   }
-
 
   render() {
     return (

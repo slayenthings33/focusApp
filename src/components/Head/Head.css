@@ -3,7 +3,8 @@
 */
 
 #headContainer{
-    /* padding-top: 50px; */
+    position: relative;
+    top: -20px;
 }
 
 #activitiesText {

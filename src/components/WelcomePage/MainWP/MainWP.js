@@ -7,7 +7,7 @@ class MainWP extends Component {
     super(props);
     this.state = {
       logo: "/img/logoBlack.svg",
-      text:"A productivity application designed to improve the remote working experience.",
+      text:"A productivity application that customizes your workday and makes your breaks count.",
       nextBtn: this.props.nextBtn,
     };
   }

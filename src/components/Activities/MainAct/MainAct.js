@@ -68,13 +68,13 @@ class MainAct extends Component {
             </div>
             <div className="rowContainer">
             <label className="labelContainer">
-              <img src="/img/walk.png" alt="" className="formImage"/>
-              <span>Walk</span>
-              <input name="walk" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput} />
+              <img src="/img/movie.png" alt="" className="formImage" id="movieImg"/>
+              <span>Movie</span>
+              <input name="movie" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput} />
             </label>
           <label className="labelContainer">
-              <img src="/img/news.png" alt="" className="formImage"/>
-              <span>News</span>
+              <img src="/img/funny.png" alt="" className="formImage" id="funnyImg"/>
+              <span>Funny</span>
               <input className="checkboxInput" name="news" type="checkbox" checked={this.state.unselected}
                 onChange={this.toggleInput} />
             </label>

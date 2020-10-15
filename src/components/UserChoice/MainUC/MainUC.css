@@ -61,5 +61,13 @@
 
     border: red dotted 1px;
     height: 450px;
-    
+}
+.carouselImg {
+    width: 80%;
+    border: black solid 2px;
+    border-radius: 20px;
+}
+.ucTitle {
+    position: relative;
+    color: red,
 }
