@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './MainAct.css';
+import Button from '../../Button/Button'
 
 class MainAct extends Component {
   constructor(props){
@@ -7,6 +8,7 @@ class MainAct extends Component {
     this.state = {
       selected: true,
       unselected: false,
+      nextBtn: this.props.nextBtn,
     };
   }
   toggleInput = () => {
@@ -57,7 +59,6 @@ class MainAct extends Component {
               onChange={this.toggleInput} />
           </label>
           </div>
-         
            <div className="rowContainer">
           <label className="labelContainer">
             <img src="/img/walk.png" alt="" className="formImage"/>
@@ -65,11 +66,15 @@ class MainAct extends Component {
           </label>
         <label className="labelContainer">
             <img src="/img/news.png" alt="" className="formImage"/>
+            <span>News</span>
             <input className="checkboxInput" name="news" type="checkbox" checked={this.state.unselected}
               onChange={this.toggleInput} />
           </label>
           </div>
         </form>
+        <div id="activitiesBtnContainer">
+          <Button nextBtn={this.state.nextBtn}/>
+        </div>
       </div>
     );
   }

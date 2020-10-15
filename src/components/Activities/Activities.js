@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './Activities.css';
 import Head from '../Head/Head'
+// import MainAct from './MainAct'
 import MainAct from './MainAct/MainAct'
-import Foot from '../Foot/Foot'
+
 
 class Activities extends Component {
   constructor(props){
@@ -16,10 +17,9 @@ class Activities extends Component {
 
   render() {
     return (
-        <div className="page">
+        <div id="activitiesPage">
           <Head title={this.props.title} text={this.state.text}/>
-          <MainAct/>
-          <Foot nextBtn={this.state.nextBtn}/>
+          <MainAct nextBtn={this.state.nextBtn}/>
         </div>
     );
   }

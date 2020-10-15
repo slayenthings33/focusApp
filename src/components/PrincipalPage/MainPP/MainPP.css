@@ -8,11 +8,18 @@
 #principalContainer{
     display: flex;
     justify-content: center;
-    height: 250px;
-    width: 100%;
+    width: 80%;
+    border: red dotted 1px;
 }
 #progressBar {
     position: relative;
     top: 150px;
-    width: 80%;
+    width: 100%;
+    right: -70px;
+}
+#ppBtnContainer {
+    border: yellowgreen dotted 1px;
+    position: relative;
+    top: 220px;
+    left: -80px;
 }

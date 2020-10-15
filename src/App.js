@@ -10,6 +10,7 @@ import WelcomePage from "./components/WelcomePage/WelcomePage";
 import UserChoice from './components/UserChoice/UserChoice';
 import GraphPage from './components/GraphPage/GraphPage';
 import AboutUs from './components/AboutUs/AboutUs';
+import { UserProvider }from './components/userContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Add the Firebase products that you want to use
@@ -28,38 +29,37 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <FirebaseAppProvider firebaseConfig={firebaseConfig}>  
-            <Route exact path="/" link ={<Link to='/WelcomePage'>Welcome Page</Link>}>
-              <WelcomePage title="Welcome to"/> 
-            </Route>
-            <Route exact path="/CreateAccount" link ={<Link to='/CreateAccount'>Create Account</Link>}>
-              <CreateAccount title="Create Account"/> 
-            </Route>
-            <Route exact path="/AboutYou" link ={<Link to='/AboutYou'>About You</Link>}>
-              <AboutYou title="About You"/> 
-            </Route>
-            <Route exact path="/Activities" link ={<Link to='/Activities'>Activities</Link>}>
-              <Activities title="Activities"/> 
-            </Route>
-            <Route exact path="/UserChoice" link ={<Link to='/UserChoice'>User Choice</Link>}>
-              <UserChoice title="Are you likely to enjoy this content?"/> 
-            </Route>
-            <Route exact path="/AboutUs" link ={<Link to='/AboutUs'>About Us</Link>}>
-              <AboutUs/> 
-            </Route>
-            <Route exact path="/AppBehavior" link ={<Link to='/AppBehavior'>App Behavior</Link>}>
-              <AppBehavior/> 
-            </Route>
-            <Route exact path="/PrincipalPage" link ={<Link to='/PrincipalPage'>Principal Page</Link>}>
-              <PrincipalPage/> 
-            </Route>
-            <Route exact path="/GraphPage" link ={<Link to='/GraphPage'>Graph Page</Link>}>
-              <GraphPage/> 
-            </Route>
-            {/* <Route  path="/AboutUs" component={AboutUs} link={<Link to='/AboutUs'>About Us</Link>}/> */}
-            {/* <Route  path="/PrincipalPage" component={PrincipalPage}/> */}
-            {/* <Route  path="/GraphPage" component={GraphPage}/> */}
-          </FirebaseAppProvider>  
+          <UserProvider>  
+            <FirebaseAppProvider firebaseConfig={firebaseConfig}>  
+              <Route exact path="/" link ={<Link to='/WelcomePage'>Welcome Page</Link>}>
+                <WelcomePage title="Welcome to"/> 
+              </Route>
+              <Route exact path="/CreateAccount" link ={<Link to='/CreateAccount'>Create Account</Link>}>
+                <CreateAccount title="Create Account"/> 
+              </Route>
+              <Route exact path="/AboutYou" link ={<Link to='/AboutYou'>About You</Link>}>
+                <AboutYou title="About You"/> 
+              </Route>
+              <Route exact path="/Activities" link ={<Link to='/Activities'>Activities</Link>}>
+                <Activities title="Activities"/> 
+              </Route>
+              <Route exact path="/UserChoice" link ={<Link to='/UserChoice'>User Choice</Link>}>
+                <UserChoice title="Are you likely to enjoy this content?"/> 
+              </Route>
+              <Route exact path="/AboutUs" link ={<Link to='/AboutUs'>About Us</Link>}>
+                <AboutUs/> 
+              </Route>
+              <Route exact path="/AppBehavior" link ={<Link to='/AppBehavior'>App Behavior</Link>}>
+                <AppBehavior/> 
+              </Route>
+              <Route exact path="/PrincipalPage" link ={<Link to='/PrincipalPage'>Principal Page</Link>}>
+                <PrincipalPage/> 
+              </Route>
+              <Route exact path="/GraphPage" link ={<Link to='/GraphPage'>Graph Page</Link>}>
+                <GraphPage/> 
+              </Route>
+            </FirebaseAppProvider>  
+          </UserProvider>
         </Switch> 
     </BrowserRouter>
 

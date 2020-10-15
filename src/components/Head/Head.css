@@ -2,6 +2,10 @@
  * Head css File
 */
 
+#headContainer{
+    /* padding-top: 50px; */
+}
+
 #activitiesText {
     position: relative;
     margin-top: -28px;

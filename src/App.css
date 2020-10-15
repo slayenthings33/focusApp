@@ -4,12 +4,10 @@
 }
 .mainFont {
   font-family: 'Montserrat', sans-serif;
-  
 }
 
-.page {
-  margin-top: -40px;
-  background-image: linear-gradient(to bottom, #ac33c0, #b554c9, #be6fd1, #c788d8, #d0a0df, #ccade9, #c9b9f1, #c8c5f7, #b2caff, #96d0ff, #76d5ff, #54dafe);
+form input {
+  border-radius: 20px;
 }
 
 .App {

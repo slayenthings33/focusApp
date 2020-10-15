@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Foot.css';
+import './Button.css';
 import {Link} from "react-router-dom";
 
 // const paths = ["/", "/CreateAccount","/AboutYou","/Activities","/UserChoice", "/AboutUs","/AppBehavior", "/PrincipalPage", "/GraphPage"];
@@ -29,6 +29,7 @@ class Foot extends Component {
     super(props);
     this.state = {
       nextBtn:this.props.nextBtn,
+      onClick: this.props.onClick,
       arrow: "/img/continueArrow.png",
     };
   }
@@ -38,7 +39,7 @@ class Foot extends Component {
     // console.log(this.state.link);
     return (
       <div id="footContainer">
-       <Link to={this.state.nextBtn} id="nextPageBtn"><img src={this.state.arrow} alt="next button"/></Link>
+       <Link to={this.state.nextBtn} onClick={this.state.onClick} id="nextPageBtn"><img src={this.state.arrow} alt="next button"/></Link>
       </div>
     );
   }

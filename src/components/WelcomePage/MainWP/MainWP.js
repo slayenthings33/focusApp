@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './MainWP.css';
+import Button from "../../Button/Button";
 
 class MainWP extends Component {
   constructor(props){
@@ -7,6 +8,7 @@ class MainWP extends Component {
     this.state = {
       logo: "/img/logoBlack.svg",
       text:"A productivity application designed to improve the remote working experience.",
+      nextBtn: this.props.nextBtn,
     };
   }
 
@@ -18,6 +20,7 @@ class MainWP extends Component {
         <h2>{this.state.title}</h2>
         <img id="logo" src={this.state.logo} alt="Logo"/>
         <h4 id="welcomeText" className="mainFont"> {this.state.text}</h4>
+        <Button nextBtn={this.state.nextBtn}/>
       </div>
     );
   }

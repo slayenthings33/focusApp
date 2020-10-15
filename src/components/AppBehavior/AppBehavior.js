@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './AppBehavior.css';
 import Head from '../Head/Head'
 import MainAppBe from "./MainAppBe/MainAppBe"
-import Foot from '../Foot/Foot'
 
 class AppBehavior extends Component {
   constructor(props){
@@ -15,13 +14,10 @@ class AppBehavior extends Component {
 
   render() {
     return (
-      <body>
-        <div class="page">
+        <div id="appBehaviorPage">
           <Head title={this.state.title}/>
-          <MainAppBe/>
-          <Foot nextBtn={this.state.nextBtn}/>
+          <MainAppBe nextBtn={this.state.nextBtn}/>
         </div>
-      </body>
     );
   }
 }

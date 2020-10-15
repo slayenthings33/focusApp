@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import './AboutYou.css';
 import Head from '../Head/Head'
 import MainAbY from './MainAbY/MainAbY'
-import Foot from '../Foot/Foot'
+import UserContext from '../userContext';
+
+
 
 class AboutYou extends Component {
   constructor(props){
@@ -10,19 +12,22 @@ class AboutYou extends Component {
     this.state = {
       title:"About You",
       nextBtn: "/Activities"
-    };
+    };  
   }
 
-
+  
+  
   render() {
     return (
-        <div className="page">
-            <Head title={this.state.title} />
-            <MainAbY/>
-            <Foot nextBtn= {this.state.nextBtn}/>
-        </div>
+      <div id="aboutYouPage">
+        <Head title={this.state.title} />
+        <MainAbY nextBtn= {this.state.nextBtn}/>
+      </div>
     );
   }
 }
+
+
+AboutYou.contextType = UserContext
 
 export default AboutYou;

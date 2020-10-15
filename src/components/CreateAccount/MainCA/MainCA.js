@@ -4,6 +4,7 @@ import './MainCA.css';
 import "firebase/firestore";
 import "firebase/firebase-auth"
 import firebase from "firebase/app"
+import Button from "../../Button/Button"
 
 
 
@@ -13,8 +14,10 @@ class MainCA extends Component {
     super(props);
     this.state = {
       value: '',
-      email:"",
-      password: "",
+      email:'',
+      password:'',
+      nextBtn: this.props.nextBtn,
+      
     };
     this.register=this.register.bind(this)
     this.changePass=this.changePass.bind(this)
@@ -30,7 +33,11 @@ class MainCA extends Component {
  }
 
     register() {
-      // let firebase = useFirebaseApp();
+      const db=firebase.firestore();
+      const newUser={email:this.state.email,
+        password:this.state.password
+        }
+      const addUser=db.collection("users").add(newUser);
       firebase
       .auth()
       .createUserWithEmailAndPassword(this.state.email,this.state.password)
@@ -46,18 +53,16 @@ class MainCA extends Component {
   render() {  
     return (
       <div className="formCaContainer">
-          {/* <button onClick={this.register}>Register</button> */}
-          <form id="caForm">
+        <form id="caForm">
           <p className="pageText">Email:</p>
           <input type='text' id="email" name='email' className="caInput" onChange={this.changeEmail}/><br/><br/>
           <p className="pageText">Password:</p>
           <input type='password' name='password' className="caInput" onChange={this.changePass}/> <br/>
-          <input id="caBtn" type="submit" value="Submit" onClick={this.register}/>
         </form>
-        <div id="btnContainer">
-          <img src="img/facebookIcon.png" alt="login with facebook" className="caIcons"/>
-          <img src="/img/googleIcon.png" alt="login with google" className="caIcons"/>
-        </div>
+        <img src="img/facebookIcon.png" alt="login with facebook" className="caIcons"/>
+        <img src="/img/googleIcon.png" alt="login with google" className="caIcons"/>
+        <Button onClick={this.register}  nextBtn={this.state.nextBtn}/>
+        
       </div>
     )
 }}

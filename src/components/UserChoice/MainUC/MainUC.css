@@ -15,7 +15,7 @@
 }
 
 #fakeImg {
-    margin-top: 25px;
+    margin-top: 80px;
     height: 200px;
     width:90%;
     border: blue dotted 2px;
@@ -47,3 +47,4 @@
     position: relative;
     margin-top: -70px;
 }
+

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './GraphPage.css';
 import Head from '../Head/Head';
 import MainGP from './MainGP/MainGP';
-import Foot from '../Foot/Foot';
+import Foot from '../Button/Button';
 
 class GraphPage extends Component {
   constructor(props){
