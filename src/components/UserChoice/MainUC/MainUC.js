@@ -16,13 +16,15 @@ class MainUC extends Component {
       <div id="contentContainer">
         <div id="content">
         <div id="fakeImg">
-          <img id="ucImg" src="" alt=""/>
+          <img id="ucPic" src="/img/yogaVidPic.jpg" alt=""/>
         </div>
         <p id="ucImgTitle">The title is - This</p>
         </div>
         <div id="btnContainer">
-          <img className="ucBtns" src="/img/like.png" alt=""/><img className="ucBtns" src="/img/dislike.png" alt=""/>
-        <Button nextBtn={this.state.nextBtn}/>
+          <div id="likeBtnContainer">
+            <img className="ucBtns" src="/img/like.png" alt=""/><img className="ucBtns" src="/img/dislike.png" alt=""/>
+          </div>
+            <Button nextBtn={this.state.nextBtn}/>
         </div>
       </div>
     );

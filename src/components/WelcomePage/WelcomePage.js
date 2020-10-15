@@ -17,13 +17,8 @@ class WelcomePage extends Component {
 render() {    
   return (
       <div id="welcomePage">
-        <UserConsumer> 
-          {email => {
-            return <span>Email: {email}</span>
-            }} 
-        </UserConsumer>
-          <Head title={this.state.title}/>
-          <MainWP nextBtn={this.state.nextBtn}/>
+        <Head title={this.state.title}/>
+        <MainWP nextBtn={this.state.nextBtn}/>
       </div>
     );
   }

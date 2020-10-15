@@ -18,7 +18,7 @@
     margin-top: 80px;
     height: 200px;
     width:90%;
-    border: blue dotted 2px;
+    /* border: blue dotted 2px; */
     border-radius: 20px;
 }
 
@@ -48,3 +48,18 @@
     margin-top: -70px;
 }
 
+#ucPic{
+    width: 100%;
+    border-radius: 20px;
+    border: black 2px solid;
+}
+#btnContainer {
+    position: relative;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+
+    border: red dotted 1px;
+    height: 450px;
+    
+}

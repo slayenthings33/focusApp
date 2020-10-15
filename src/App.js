@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import {BrowserRouter, Switch, Route, Link} from "react-router-dom"
 import CreateAccount from "./components/CreateAccount/CreateAccount";
@@ -10,7 +10,7 @@ import WelcomePage from "./components/WelcomePage/WelcomePage";
 import UserChoice from './components/UserChoice/UserChoice';
 import GraphPage from './components/GraphPage/GraphPage';
 import AboutUs from './components/AboutUs/AboutUs';
-import { UserProvider }from './components/userContext';
+// import { UserProvider }from './components/userContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Add the Firebase products that you want to use
@@ -25,12 +25,14 @@ import {FirebaseAppProvider} from 'reactfire';
 
 
 function App() {
+  // const [context, setContext]=useState("martitasea");
+
   return (
     <div className="App">
       <BrowserRouter>
         <Switch>
-          <UserProvider>  
-            <FirebaseAppProvider firebaseConfig={firebaseConfig}>  
+          <FirebaseAppProvider firebaseConfig={firebaseConfig}>  
+            {/* <UserProvider value={{name:context, method:setContext}}>   */}
               <Route exact path="/" link ={<Link to='/WelcomePage'>Welcome Page</Link>}>
                 <WelcomePage title="Welcome to"/> 
               </Route>
@@ -41,7 +43,7 @@ function App() {
                 <AboutYou title="About You"/> 
               </Route>
               <Route exact path="/Activities" link ={<Link to='/Activities'>Activities</Link>}>
-                <Activities title="Activities"/> 
+                <Activities title="Activities"/>
               </Route>
               <Route exact path="/UserChoice" link ={<Link to='/UserChoice'>User Choice</Link>}>
                 <UserChoice title="Are you likely to enjoy this content?"/> 
@@ -58,8 +60,8 @@ function App() {
               <Route exact path="/GraphPage" link ={<Link to='/GraphPage'>Graph Page</Link>}>
                 <GraphPage/> 
               </Route>
-            </FirebaseAppProvider>  
-          </UserProvider>
+            {/* </UserProvider> */}
+          </FirebaseAppProvider>  
         </Switch> 
     </BrowserRouter>
 

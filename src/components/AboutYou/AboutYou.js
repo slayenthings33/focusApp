@@ -5,7 +5,6 @@ import MainAbY from './MainAbY/MainAbY'
 import UserContext from '../userContext';
 
 
-
 class AboutYou extends Component {
   constructor(props){
     super(props);
@@ -26,8 +25,5 @@ class AboutYou extends Component {
     );
   }
 }
-
-
-AboutYou.contextType = UserContext
 
 export default AboutYou;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './MainAbY.css';
 import Button from '../../Button/Button';
 import firebase from "firebase/app";
-import UserContext, { UserConsumer } from '../../userContext';
+// import UserContext, { UserConsumer } from '../../userContext';
 
 class MainAbY extends Component {
   constructor(props){
@@ -23,18 +23,18 @@ class MainAbY extends Component {
   render() {
     return (
       <div className="formAbyContainer">
-        <UserConsumer>  
+        {/* <UserConsumer> */}
           <form id="aboutYouForm">
             <p className="pageText">What you would like to be called:</p>
             <input type='text' name='name' value={this.state.name} onChange={this.myChangeHandler}/><br/><br/>
           </form>
-          </UserConsumer>
+          {/* </UserConsumer> */}
           <Button nextBtn={this.state.nextBtn}/>
       </div>
     );
   }
 }
 
-MainAbY.contextType = UserContext
+// MainAbY.contextType = UserContext
 
 export default MainAbY;
