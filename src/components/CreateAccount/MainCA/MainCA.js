@@ -52,7 +52,7 @@ class MainCA extends Component {
  }
   render() {  
     return (
-      <div className="formCaContainer">
+      <div id="formCaContainer">
         <form id="caForm">
           <p className="pageText">Email:</p>
           <input type='text' id="email" name='email' className="caInput" onChange={this.changeEmail}/><br/><br/>
@@ -61,6 +61,7 @@ class MainCA extends Component {
         </form>
         <img src="img/facebookIcon.png" alt="login with facebook" className="caIcons"/>
         <img src="/img/googleIcon.png" alt="login with google" className="caIcons"/>
+        {/* <span>Already have an account?</span> */}
         <Button onClick={this.register}  nextBtn={this.state.nextBtn}/>
         
       </div>

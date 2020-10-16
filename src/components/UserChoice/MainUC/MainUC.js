@@ -10,22 +10,20 @@ class MainUC extends Component {
     super(props);
     this.state = {
       nextBtn:this.props.nextBtn,
+      index: 0,
     };
-    // let ControlledCarousel = () => {
-    //   const [index, setIndex] = useState(0);
-    
-    //   const handleSelect = (selectedIndex, e) => {
-    //     setIndex(selectedIndex);
-    //   };
+   
   }
   
-  
+  handleSelect = (e) => {
+    this.setState({index:e})
+  };
   
   // activeIndex={index} onSelect={handleSelect}
   render() {
     return (
       <div id="contentContainer">
-        <Carousel >
+      <Carousel activeIndex={this.state.index} onSelect={this.handleSelect}>
       <Carousel.Item>
         <img
           className="carouselImg"
@@ -43,8 +41,11 @@ class MainUC extends Component {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h3 class="ucTitle">Funny Animal Videos</h3>
+          <div id="ucTitleContainer">
+            <h3 class="ucTitle">Funny Animal Videos</h3>
+          </div>
         </Carousel.Caption>
+
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -58,10 +59,16 @@ class MainUC extends Component {
       </Carousel.Item>
     </Carousel>
     {<Button nextBtn={this.state.nextBtn}/>}
-      </div>
+    <div id="btnContainer">
+      <div id="likeBtnContainer">
+        <img className="ucBtns" src="/img/like.png" alt=""/><img className="ucBtns" src="/img/dislike.png" alt=""/>
+        </div>
+        </div>    
+    </div>
   );
 }
 }
+
 
 export default MainUC;
         {/* // <div id="content">
@@ -70,8 +77,5 @@ export default MainUC;
         // </div>
         // <p id="ucImgTitle">The title is - This</p>
         // </div>
-        // <div id="btnContainer">
-        //   <div id="likeBtnContainer">
-        //     <img className="ucBtns" src="/img/like.png" alt=""/><img className="ucBtns" src="/img/dislike.png" alt=""/>
-        //   </div>
+        // 
         // </div> */}

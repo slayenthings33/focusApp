@@ -7,7 +7,7 @@ class AppBehavior extends Component {
   constructor(props){
     super(props);
     this.state = {
-      title: "Method Personalization",
+      title: "",
       nextBtn:"/PrincipalPage",
     };
   }

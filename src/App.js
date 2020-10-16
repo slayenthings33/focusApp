@@ -10,7 +10,7 @@ import WelcomePage from "./components/WelcomePage/WelcomePage";
 import UserChoice from './components/UserChoice/UserChoice';
 import GraphPage from './components/GraphPage/GraphPage';
 import AboutUs from './components/AboutUs/AboutUs';
-// import { UserProvider }from './components/userContext';
+import { UserProvider }from './components/userContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Add the Firebase products that you want to use
@@ -32,7 +32,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <FirebaseAppProvider firebaseConfig={firebaseConfig}>  
-            {/* <UserProvider value={{name:context, method:setContext}}>   */}
+            <UserProvider>  
               <Route exact path="/" link ={<Link to='/WelcomePage'>Welcome Page</Link>}>
                 <WelcomePage title="Welcome to"/> 
               </Route>
@@ -60,7 +60,7 @@ function App() {
               <Route exact path="/GraphPage" link ={<Link to='/GraphPage'>Graph Page</Link>}>
                 <GraphPage/> 
               </Route>
-            {/* </UserProvider> */}
+            </UserProvider>
           </FirebaseAppProvider>  
         </Switch> 
     </BrowserRouter>

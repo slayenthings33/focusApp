@@ -23,7 +23,7 @@
 }
 
 .ucBtns {
-    height: 50px;
+    height: 80px;
     margin: 10px 20px;
     padding: 10px;
     border: black solid 1px;
@@ -31,7 +31,13 @@
     position: relative;
     top: 50px;
 }
-
+.carousel-caption{
+    position: relative;
+}
+#ucTitleContainer{
+    position: relative;
+    top: 260px;
+}
 #ucImgTitle {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -48,18 +54,12 @@
     margin-top: -70px;
 }
 
-#ucPic{
-    width: 100%;
-    border-radius: 20px;
-    border: black 2px solid;
-}
 #btnContainer {
     position: relative;
-    top: 50px;
+    top: -50px;
     display: flex;
     flex-direction: column;
-
-    border: red dotted 1px;
+    /* border: red dotted 1px; */
     height: 450px;
 }
 .carouselImg {
