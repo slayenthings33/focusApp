@@ -7,19 +7,14 @@ class MainAct extends Component {
   constructor(props){
     super(props);
     this.state = {
-      selected: true,
-      unselected: false,
+     check: false,
       nextBtn: this.props.nextBtn,
     };
+    // this.toggleInput = this.toggleSelect.bind(this);
   }
-  toggleInput = () => {
-    if(this.state.selected){
-      console.log()
-      return this.state.unselected
-    } else {
-      return this.state.unselected
-    }
-  }
+  
+  
+  
 
   render() {
     return (
@@ -31,8 +26,12 @@ class MainAct extends Component {
               <span>Yoga</span>
               <input className="checkboxInput" name="yoga"
                 type="checkbox"
+                value="checked"
                 checked={this.state.unselected}
-                onChange={this.toggleInput} />
+                onChange = {(e) => this.setState(prevState => ({
+                  check: !prevState.check
+                }))} 
+                />
             </label>
               <label className="labelContainer">
               <img className="formImage" src="/img/meditate.png" alt=""/>

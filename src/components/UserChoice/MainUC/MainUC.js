@@ -31,7 +31,9 @@ class MainUC extends Component {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3 class="ucTitle">Yoga at Your Desk</h3>
+          <div class="ucTitleContainer">
+            <h3 class="ucTitle">Yoga at Your Desk</h3>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -41,7 +43,7 @@ class MainUC extends Component {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <div id="ucTitleContainer">
+          <div class="ucTitleContainer">
             <h3 class="ucTitle">Funny Animal Videos</h3>
           </div>
         </Carousel.Caption>
@@ -54,7 +56,9 @@ class MainUC extends Component {
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h3 class="ucTitle">Purl | Pixar Shorts</h3>
+          <div className="ucTitleContainer">
+            <h3 class="ucTitle">Purl | Pixar Shorts</h3>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

@@ -1,25 +1,66 @@
-/*
- * MainPP css File
-*/
 
-.MainPP {
-    /* propertys here */
-}
-#principalContainer{
+#progressBarContainer {
+    /* border: purple 3px dotted; */
+    width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    width: 80%;
-    border: red dotted 1px;
+    position: absolute;
+    margin-top: 150px;
 }
 #progressBar {
     position: relative;
-    top: 150px;
-    width: 100%;
-    right: -70px;
+    border: black 2px solid;
+    box-shadow: 3px 3px;
+    width: 90%;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
 }
 #ppBtnContainer {
-    border: yellowgreen dotted 1px;
+    border: yellowgreen dotted 5px;
     position: relative;
-    top: 220px;
-    left: -80px;
+    top: 200px;
+    left: -40px;
+    display: none;
+}
+#ppImgContainer {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 55px;
+    /* border: red dotted 2px; */
+    margin: 5px;
+    width: 98%;
+    
+}
+.ppImgs {
+    width: 18%;
+}
+#segmentContainer {
+    display: flex;
+    position: absolute;
+    top: 11px;
+    width: 65%;
+    justify-content: space-between;
+    margin: 0px 50px 0px 50px;
+    z-index: 1;
+    /* border: red dotted 2px; */
+}
+.segments {
+    height: 37px;
+    width: 4%;
+    background: linear-gradient(45deg, #4510e3 5%, #e3dfde 5%, #e3dfde 45%, #4510e3 45%, #4510e3 55%, #e3dfde 55%, #e3dfde 95%, #4510e3 95%);
+    background-size: 10px 10px;
+    background-position: 50px 50px;
+    /* border: red dotted 3px; */
+    border-radius: 1px;
+}
+#lunch{
+    width: 12%;
+    background-color: #edb2bb;
+    background-image: linear-gradient(45deg, #c92841 25%, transparent 25%, transparent 75%, #c92841 75%), linear-gradient(45deg, #c92841 25%, transparent 25%, transparent 75%, #c92841 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
 }

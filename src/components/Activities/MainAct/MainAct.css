@@ -30,9 +30,9 @@ form label span {
     margin: 0px 20px 0px 90px;
 }
 .formImage{
-    width: 60%;
-    margin: 6px 18px 6px 18px;
-    padding: 5px;
+    width: 80%;
+    margin: -2px 18px 6px 18px;
+    padding: 2px;
     /* min-width: 60%; */
     /* border: black solid 1px; */
     border-radius: 20px;
@@ -47,5 +47,5 @@ form label span {
 }
 #funnyImg, #movieImg {
     min-width: 60%;
-    margin: 10px 30px 10px 30px;
+    margin: 2px 30px 10px 30px;
 }
