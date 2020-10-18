@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './PrincipalPage.css';
 import Head from '../Head/Head';
 import MainPP from './MainPP/MainPP';
-import AlertModal from './AlertModal/AlertModal';
+// import AlertModal from './AlertModal/AlertModal';
 
 
 
@@ -26,7 +26,6 @@ class PrincipalPage extends Component {
     return (
         <div id="principalPage" onClick={this.touchAdd} id="principalPage" >
           <Head title={this.state.quote}/>
-          <AlertModal/>
           <MainPP nextBtn={this.state.nextBtn}/> 
         </div>
     );

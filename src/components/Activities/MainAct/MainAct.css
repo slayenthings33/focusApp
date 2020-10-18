@@ -14,21 +14,12 @@
     height: 80px;
 }
 
-
-/*
-.checkboxInput input[type="checkbox"]:checked + label {
-    border: red solid 1px;
-}
-.onlinecheckbox input[type="checkbox"]:checked + label {
-    border: yellowgreen solid 5px;
-} */
-
 form label span {
     margin-top: -15px;
     font-family: 'Montserrat', sans-serif;
 }
-.formActContainer {
-    margin-top: -50px;
+#formActContainer {
+    margin-top: -70px;
     display: flex;
     flex-direction: row;
     /* border: red dotted 1px; */

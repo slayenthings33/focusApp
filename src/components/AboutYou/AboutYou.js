@@ -10,7 +10,8 @@ class AboutYou extends Component {
     super(props);
     this.state = {
       title:"About You",
-      nextBtn: "/Activities"
+      nextBtn: "/Activities",
+      backBtn: "img/back.png"
     };  
   }
 
@@ -19,7 +20,7 @@ class AboutYou extends Component {
   render() {
     return (
       <div id="aboutYouPage">
-        <Head title={this.state.title} />
+        <Head title={this.state.title} backBtn={this.state.backBtn}/>
         <MainAbY nextBtn= {this.state.nextBtn}/>
       </div>
     );

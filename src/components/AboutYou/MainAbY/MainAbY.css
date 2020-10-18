@@ -7,3 +7,7 @@
     margin: 150px 0px 30px 0px;
     
 }
+#aboutYouNextBtnContainer {
+    position: relative;
+    top: -17px;
+}

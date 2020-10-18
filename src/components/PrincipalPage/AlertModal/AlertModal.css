@@ -8,7 +8,7 @@
 #modalIconContainer {
     display: flex;
     text-align: center;
-
+    margin-top: 20px;
 }
 .modalIconCollumn {
     display: flex;
@@ -24,7 +24,4 @@
 }
 .emojiText {
     font-family: 'Montserrat', sans-serif;
-}
-#emojiQuestionText{
-    margin-bottom: 30px;
 }

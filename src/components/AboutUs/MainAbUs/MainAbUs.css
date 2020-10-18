@@ -45,9 +45,15 @@
 }
 #methodSelectTxt {
     position: relative;
-    top: -50px;
+    top: -80px;
+    width: 80%;
+    height: 200px;
+    /* border: red dotted 2px; */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
 }
 #abUsNextBtn {
-    position: relative;
-    top: -70px;
+    position: absolute;
+    top: 500px;
+    left: 125px;
 }

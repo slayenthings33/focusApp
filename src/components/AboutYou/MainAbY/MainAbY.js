@@ -29,7 +29,9 @@ class MainAbY extends Component {
             <input type='text' name='name' value={this.state.name} onChange={this.myChangeHandler}/><br/><br/>
           </form>
           {/* </UserConsumer> */}
-          <Button nextBtn={this.state.nextBtn}/>
+          <div id="aboutYouNextBtnContainer">
+            <Button nextBtn={this.state.nextBtn}/>
+          </div>
       </div>
     );
   }

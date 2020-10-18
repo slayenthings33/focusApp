@@ -4,13 +4,13 @@
 <rect width="42" height="61" transform="matrix(-1 0 0 1 19 -3)" fill="#C4C4C4"/>
 </mask>
 <g mask="url(#mask0)">
-<path d="M12.092 34.268H26.132L29.156 41H31.928L20.408 15.8H17.78L6.26 41H9.068L12.092 34.268ZM13.064 32.108L19.112 18.572L25.16 32.108H13.064Z" fill="#E1FAFF"/>
+<path d="M12.092 34.268H26.132L29.156 41H31.928L20.408 15.8H17.78L6.26 41H9.068L12.092 34.268ZM13.064 32.108L19.112 18.572L25.16 32.108H13.064Z" fill="#333333"/>
 </g>
 <mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="37" y="-3" width="42" height="61">
 <rect x="37" y="-3" width="42" height="61" fill="#C4C4C4"/>
 </mask>
 <g mask="url(#mask1)">
-<path d="M43.908 34.268H29.868L26.844 41H24.072L35.592 15.8H38.22L49.74 41H46.932L43.908 34.268ZM42.936 32.108L36.888 18.572L30.84 32.108H42.936Z" fill="#E1FAFF"/>
+<path d="M43.908 34.268H29.868L26.844 41H24.072L35.592 15.8H38.22L49.74 41H46.932L43.908 34.268ZM42.936 32.108L36.888 18.572L30.84 32.108H42.936Z" fill="#333333"/>
 </g>
 <defs>
 <linearGradient id="paint0_linear" x1="28" y1="0" x2="28" y2="56" gradientUnits="userSpaceOnUse">

@@ -7,7 +7,8 @@ class DescriptionPage extends Component {
   constructor(props){
     super(props);
     this.state = {
-      nextBtn: "/AppBehavior"
+      nextBtn: "/AppBehavior",
+      backBtn: "/CreateAccount",
     };
   }
 

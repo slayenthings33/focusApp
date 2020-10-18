@@ -67,7 +67,9 @@ class MainCA extends Component {
         </form>
         <img src={this.state.facebookIcon} alt="login with facebook" className="caIcons"/>
         <img src={this.state.googleIcon} alt="login with google" className="caIcons"/>
-        <Button id="caNextBtn" onClick={this.register}  nextBtn={this.state.nextBtn}/>
+        <div id="caNextBtnContainer">
+          <Button onClick={this.register}  nextBtn={this.state.nextBtn}/>
+        </div>
         
       </div>
     )

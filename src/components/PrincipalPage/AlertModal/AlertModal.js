@@ -1,37 +1,49 @@
 import React, { Component } from 'react';
 import './AlertModal.css';
 import Modal from 'react-bootstrap/Modal';
+import { Alert } from 'bootstrap';
 
-class AlertPage extends Component {
+class AlertModal extends Component {
   constructor(props){
+    console.log(props);
     super(props);
     this.state = {
-
+      showModal: this.props.showModal,
     };
     this.launchVideo = this.launchVideo.bind(this);
+    // this.handleOpenModal = this.handleOpenModal.bind(this);
+    // this.handleClosenModal = this.handleCloseModal.bind(this);
     // document.getElementById("movieContainer").style.display = "none";
   }
 
-  componentDidMount() {
-    document.getElementById("movieContainer").style.display="none";
+  // componentDidMount() {
+  //   document.getElementById("movieContainer").style.display="none";
+  // }
+
+  componentDidUpdate() {
+    console.log("**************************")
+    console.log(this.state)
   }
 
   launchVideo() {
     document.getElementById("emojiBreakContainer").style.display = "none";
     document.getElementById("movieContainer").style.display = "flex";
     console.log("launchVideo")
-    // document.getElementById("movieContainer").src = "https://www.youtube.com/watch?v=yGeJ745bB_8";
-    // document.getElementById("myVideo").load();
-
   }
 
-  // https://www.youtube.com/watch?v=yGeJ745bB_8
+  // handleOpenModal() {
+  //   this.setState({showModal: true});
+  // }
+  // handleCloseModal() {
+  //   this.setState({showModal: false});
+  // }
 
   render() {
+    console.log(this.state.showModal)
     return (
       <div id="alertModalContainer">
-        <Modal show={true} aria-labelledby="contained-modal-title-vcenter" sieze="xl" centered >
-          <Modal.Header closeButton>
+        <Modal show={this.state.showModal} aria-labelledby="contained-modal-title-vcenter" size="xl" centered >
+          <Modal.Header closeButton /* onClick={this.handleCloseModal} */>
             <Modal.Title class="emojiText">Break Time!</Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -53,7 +65,7 @@ class AlertPage extends Component {
                 </div>
               </div>
               <div id="movieContainer">
-                <iframe src="https://www.youtube.com/embed/yGeJ745bB_8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/Nnd5Slo02us" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
           </Modal.Body>
           <Modal.Footer>
@@ -64,4 +76,4 @@ class AlertPage extends Component {
   }
 }
 
-export default AlertPage;
+export default AlertModal;

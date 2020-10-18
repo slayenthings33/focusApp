@@ -19,7 +19,9 @@ class MainAppBe extends Component {
         <p className="mainFont">How many hours will you be working today?</p>
         <input id="appBehaviorNameInput" className="formInput" type='text' name='name' onChange={this.myChangeHandler}/><br/><br/>
       </form>
-      <Button nextBtn={this.state.nextBtn}/>
+      <div id="appBehaviorNextBtnContainer">
+        <Button nextBtn={this.state.nextBtn}/>
+      </div>
     </div>
     );
   }

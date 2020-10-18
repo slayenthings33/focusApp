@@ -6,12 +6,11 @@ class MainAbUs extends Component {
     super(props);
     this.state = {
       brealaxText: "BREALAX text",
-      pomodoroText: "Pomodoro text",
+      pomodoroText: "With this method you will work for 25 minutes followed by a short 5 minute break. Every 2 hours of work you will get a 15 minute break.",
       customizeText: "Customize text",
       nextBtn: this.props.nextBtn,
-      pomodoroText: "Pomodoro Text",
-      brealaxText: "Brealax Text",
-      customizeText: "Customize Text",
+      brealaxText: "This method is based on a study by the Draugiem Groupwhich tracked the work habits of employees. Their conclusion was: you are most productive when working for 52 minutes, followed by a 17 minute break.",
+      customizeText: "Not into the previous methods? Sometimes we know what schedule works best for us. With customize schedule, you can the duration and number of your breaks",
     };
     this.changeText = this.changeText.bind(this);
   }

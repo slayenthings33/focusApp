@@ -1,0 +1,43 @@
+/*
+ * ImageSlider css File
+*/
+
+#carouselContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: red dotted 2px; */
+    height: 500px;
+}
+#ucImgSliderTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+}
+#imgSliderImg {
+    margin-top: 70px;
+    width: 85%;
+    border: black solid 2px;
+    border-radius: 5px;
+}
+.imgSliderBtns {
+    height: 100px;
+    width: 100px;
+}
+.ucLikeBtns {
+    width: 40%;
+}
+#likeBtnsContainer {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    /* border: dotted red 2px; */
+    width: 60%;
+    height: 80px;
+}
+#dislikeBtn {
+    position: relative;
+    top: 5px;
+}

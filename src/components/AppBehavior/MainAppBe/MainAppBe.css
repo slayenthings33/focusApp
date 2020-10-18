@@ -11,3 +11,8 @@
 #appBehaviorNameInput {
     margin-bottom: 60px;
 }
+#appBehaviorNextBtnContainer {
+    position: absolute;
+    top: 375px;
+    right: 150px;
+}

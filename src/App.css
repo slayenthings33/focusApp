@@ -5,15 +5,18 @@
 .mainFont {
   font-family: 'Montserrat', sans-serif;
 }
-
+#backBtn {
+  position: absolute;
+  width: 15%;
+  top: -40px;
+  left: 20px;
+}
 form input {
   border-radius: 20px;
 }
 
 .App {
   text-align: center;
-  
-  
 }
 
 .App-logo {
@@ -50,3 +53,4 @@ form input {
     transform: rotate(360deg);
   }
 }
+

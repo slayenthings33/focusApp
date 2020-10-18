@@ -51,7 +51,7 @@
 .segments {
     height: 37px;
     width: 4%;
-    background: linear-gradient(45deg, #4510e3 5%, #e3dfde 5%, #e3dfde 45%, #4510e3 45%, #4510e3 55%, #e3dfde 55%, #e3dfde 95%, #4510e3 95%);
+    background: #0dbd8e;
     background-size: 10px 10px;
     background-position: 50px 50px;
     /* border: red dotted 3px; */

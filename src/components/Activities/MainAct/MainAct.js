@@ -23,7 +23,7 @@ toggleBorder(e) {
   render() {
     return (
       <div >
-        <form className="formActContainer">
+        <form id="formActContainer">
           <div className="rowContainer">
             <input id="yogaInput" className="checkboxInput" name="yoga"
               type="checkbox"
