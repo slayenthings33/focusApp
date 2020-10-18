@@ -11,7 +11,7 @@ class MainPP extends Component {
       nextBtn:this.props.nextBtn,
       totalHours: 8,
       workPeriodMin: 52,
-      totalMinsOfDay: 420,
+      totalMinsOfDay: 260,
       breakPeriodMin: 17,
       startTime: Date.now(),
       minsWorked: 0,
@@ -21,14 +21,15 @@ class MainPP extends Component {
     this.timer = this.timer.bind(this);
     this.increment = this.increment.bind(this);
     this.updateProgress = this.updateProgress.bind(this);
-    // this.progressPercentage = this.progressPercentage.bind(this);
+    this.checkToAskMood = this.checkToAskMood.bind(this);
+    this.progressPercentage = this.progressPercentage.bind(this);
   }
 
   updateMinsWorked() {
     console.log(this.state.startTime);
     console.log((Date.now() - this.state.startTime));
-    let secondsworked = ((Date.now() - this.state.startTime)/1000);
-    // console.log(secondsworked)
+    let secondsworked = (Math.floor((Date.now() - this.state.startTime)/1000));
+    console.log(secondsworked)
     
     this.setState({minsWorked: (secondsworked/60)});
     console.log(this.state.minsWorked);
@@ -57,21 +58,23 @@ class MainPP extends Component {
     // console.log('updateProgress');
     // console.log(this.state.progressPercentage)
     let percentage = (this.state.minsWorked/this.state.totalMinsOfDay) * 100; 
-    // console.log(percentage);
+    console.log(percentage);
     console.log(this.progressPercentage);
     this.setState({progressPercentage: percentage});
   }
 
-  // checkToAskMood() {
-  //   if(this.state.minsWorked % 2 === 0) {
-  //     console.log("I have worked an even number of minutes")
-  //   }
-  // }
+  checkToAskMood() {
+    console.log(this.state.minsWorked)
+    if(this.state.minsWorked % 2 === 0) {
+      alert("Welcome to your break, how are you feeling?")
+      console.log("I have worked an even number of minutes")
+    }
+  }
 
-  // progressPercentage() {
-  //   this.updateMinsWorked();
-  //   return (this.state.minsWorked / this.state.totalMinsOfDay) * 100;  
-  // }
+  progressPercentage() {
+    this.updateMinsWorked();
+    return (this.state.minsWorked / this.state.totalMinsOfDay) * 100;  
+  }
   
 
 

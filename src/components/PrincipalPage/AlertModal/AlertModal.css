@@ -1,0 +1,30 @@
+/*
+ * AlertPage css File
+*/
+
+.modalIcons {
+    width: 90%;
+}
+#modalIconContainer {
+    display: flex;
+    text-align: center;
+
+}
+.modalIconCollumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#alertModalPageContainer {
+    /* display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center; */
+}
+.emojiText {
+    font-family: 'Montserrat', sans-serif;
+}
+#emojiQuestionText{
+    margin-bottom: 30px;
+}

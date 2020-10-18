@@ -17,7 +17,8 @@ class MainCA extends Component {
       email:'',
       password:'',
       nextBtn: this.props.nextBtn,
-      
+      googleIcon: "/img/googleIcon.png",
+      facebookIcon: "img/facebookIcon.png",
     };
     this.register=this.register.bind(this)
     this.changePass=this.changePass.bind(this)
@@ -56,13 +57,17 @@ class MainCA extends Component {
         <form id="caForm">
           <p className="pageText">Email:</p>
           <input type='text' id="email" name='email' className="caInput" onChange={this.changeEmail}/><br/><br/>
-          <p className="pageText">Password:</p>
-          <input type='password' name='password' className="caInput" onChange={this.changePass}/> <br/>
+          <div id="passwordContainer">
+            <p className="pageText">Password:</p>
+            <input type='password' name='password' className="caInput" onChange={this.changePass}/> <br/>
+          </div>
+        <div class="haveAccountContainer">
+          <span id="haveAccount?">Already have an account ? </span><span id="signIn">Sign in</span>
+        </div>
         </form>
-        <img src="img/facebookIcon.png" alt="login with facebook" className="caIcons"/>
-        <img src="/img/googleIcon.png" alt="login with google" className="caIcons"/>
-        {/* <span>Already have an account?</span> */}
-        <Button onClick={this.register}  nextBtn={this.state.nextBtn}/>
+        <img src={this.state.facebookIcon} alt="login with facebook" className="caIcons"/>
+        <img src={this.state.googleIcon} alt="login with google" className="caIcons"/>
+        <Button id="caNextBtn" onClick={this.register}  nextBtn={this.state.nextBtn}/>
         
       </div>
     )

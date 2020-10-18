@@ -32,3 +32,17 @@
     position: relative;
     top: -20px;
 }
+.haveAccountContainer {
+    margin-top: -20px;
+}
+#signIn {
+    text-decoration: underline;
+    font-weight: bold;
+}
+#passwordContainer{
+    margin-top: -20px;
+}
+#caNextBtn {
+    position: relative;
+    top: -80px;
+}
