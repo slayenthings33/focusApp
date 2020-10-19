@@ -26,7 +26,7 @@ class MainAbY extends Component {
         {/* <UserConsumer> */}
           <form id="aboutYouForm">
             <p className="pageText">What you would like to be called:</p>
-            <input type='text' name='name' value={this.state.name} onChange={this.myChangeHandler}/><br/><br/>
+            <input type='text' name='name' onChange={this.myChangeHandler}/><br/><br/>
           </form>
           {/* </UserConsumer> */}
           <div id="aboutYouNextBtnContainer">

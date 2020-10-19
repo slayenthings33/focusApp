@@ -10,7 +10,7 @@ class PrincipalPage extends Component {
   constructor(props){
     super(props);
     this.state = {
-      quote: "This is a very motivating quote",
+      quote: '“Focus on being productive instead of busy.”',
       count: 0,
       nextBtn: "/GraphPage",
     };
@@ -25,8 +25,12 @@ class PrincipalPage extends Component {
   render() {
     return (
         <div id="principalPage" onClick={this.touchAdd} id="principalPage" >
-          <Head title={this.state.quote}/>
-          <MainPP nextBtn={this.state.nextBtn}/> 
+          <div id="ppHeadContainer">
+            <Head title={this.state.quote}/>
+          </div>
+          <div id="ppMainppContainer">
+            <MainPP nextBtn={this.state.nextBtn}/> 
+          </div>
         </div>
     );
   }

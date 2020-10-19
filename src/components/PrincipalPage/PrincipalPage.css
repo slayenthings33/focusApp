@@ -1,9 +1,6 @@
-/*
- * PrincipalPage css File
-*/
-
-.PrincipalPage {
-    /* propertys here */
+#ppHeadContainer{
+  /* border: red dotted 1px; */
+  height: 300px;
 }
 #principalPage {
     height: 670px;

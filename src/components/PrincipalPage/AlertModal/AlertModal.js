@@ -1,49 +1,47 @@
 import React, { Component } from 'react';
 import './AlertModal.css';
 import Modal from 'react-bootstrap/Modal';
-import { Alert } from 'bootstrap';
 
 class AlertModal extends Component {
   constructor(props){
     console.log(props);
     super(props);
+
+    
     this.state = {
       showModal: this.props.showModal,
+      movieContainer: React.createRef()
     };
     this.launchVideo = this.launchVideo.bind(this);
-    // this.handleOpenModal = this.handleOpenModal.bind(this);
-    // this.handleClosenModal = this.handleCloseModal.bind(this);
+     this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
     // document.getElementById("movieContainer").style.display = "none";
   }
 
-  // componentDidMount() {
-  //   document.getElementById("movieContainer").style.display="none";
-  // }
-
-  componentDidUpdate() {
-    console.log("**************************")
-    console.log(this.state)
+  componentDidUpdate(prevProps){
+    if (this.props.showModal !== prevProps.showModal) {
+     this.setState({ showModal: this.props.showModal})
+    }
   }
 
   launchVideo() {
     document.getElementById("emojiBreakContainer").style.display = "none";
     document.getElementById("movieContainer").style.display = "flex";
-    console.log("launchVideo")
   }
 
-  // handleOpenModal() {
-  //   this.setState({showModal: true});
-  // }
-  // handleCloseModal() {
-  //   this.setState({showModal: false});
-  // }
+   handleOpenModal() {
+
+     this.setState({showModal: true});
+   }
+  handleCloseModal() {
+    this.setState({showModal: false});
+  }
 
   render() {
-    console.log(this.state.showModal)
     return (
       <div id="alertModalContainer">
         <Modal show={this.state.showModal} aria-labelledby="contained-modal-title-vcenter" size="xl" centered >
-          <Modal.Header closeButton /* onClick={this.handleCloseModal} */>
+          <Modal.Header closeButton  onClick={this.handleCloseModal} >
             <Modal.Title class="emojiText">Break Time!</Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -64,7 +62,7 @@ class AlertModal extends Component {
                     </div>
                 </div>
               </div>
-              <div id="movieContainer">
+              <div id="movieContainer" ref={this.state.movieContainer} style={{display: "none"}}>
               <iframe src="https://www.youtube.com/embed/Nnd5Slo02us" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
           </Modal.Body>

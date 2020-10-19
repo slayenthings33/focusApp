@@ -10,6 +10,7 @@
 }
 #progressBar {
     position: relative;
+    top: -110px;
     border: black 2px solid;
     box-shadow: 3px 3px;
     width: 90%;
@@ -22,26 +23,27 @@
     border: yellowgreen dotted 5px;
     position: relative;
     top: 200px;
-    left: -40px;
+    left: -60px;
     display: none;
 }
 #ppImgContainer {
     position: absolute;
     display: flex;
     justify-content: space-between;
-    top: 55px;
+    top: 15px;
     /* border: red dotted 2px; */
     margin: 5px;
     width: 98%;
-    
 }
 .ppImgs {
     width: 18%;
+    /* border: red dotted 1px; */
+    margin-top: -75px;
 }
 #segmentContainer {
     display: flex;
     position: absolute;
-    top: 11px;
+    top: -98px;
     width: 65%;
     justify-content: space-between;
     margin: 0px 50px 0px 50px;

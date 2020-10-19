@@ -12,10 +12,10 @@ class MainPP extends Component {
       nextBtn:this.props.nextBtn,
       totalHours: 8,
       workPeriodMin: 52,
-      totalMinsOfDay: 260,
+      totalMinsOfDay: 100,
       breakPeriodMin: 17,
       startTime: Date.now(),
-      minsWorked: 51,
+      minsWorked: 0,
       progressPercentage: 0,
       showModal: false,
     };
@@ -28,12 +28,12 @@ class MainPP extends Component {
   }
 
   updateMinsWorked() {
-    console.log(this.state.startTime);
+    // console.log(this.state.startTime);
     console.log((Date.now() - this.state.startTime));
     let secondsworked = (Math.floor((Date.now() - this.state.startTime)/1000));
-    console.log(secondsworked)
-    this.setState({minsWorked: 52 /* (secondsworked/60) */ });
-    console.log(this.state.minsWorked);
+    // console.log(secondsworked)
+    this.setState({minsWorked: Math.floor(this.state.minsWorked + (secondsworked/60))});
+    // console.log(this.state.minsWorked);
   }
 
 
@@ -46,18 +46,18 @@ class MainPP extends Component {
   }
 
   checkIfBreak() {
-    console.log(this.state.minsWorked);
     console.log((this.state.minsWorked % 52) === 0);
-    if((this.state.minsWorked % 52) === 0) {
+    if((this.state.minsWorked % 1) === 0) {
       console.log('made it');
       this.setState({showModal:true})
+      console.log("El valor es:"+ this.state.showModal)
     }
-    console.log(this.state);
   }
   
   timer() {
     // console.log('in timer did mount');
-    setInterval(this.increment, 60000); //60000 = 1min 
+    //setInterval(this.increment, 60000); //60000 = 1min 
+    setInterval(this.increment, 60000);
   }
   
   componentDidMount() {
@@ -69,8 +69,8 @@ class MainPP extends Component {
     // console.log('updateProgress');
     // console.log(this.state.progressPercentage)
     let percentage = (this.state.minsWorked/this.state.totalMinsOfDay) * 100; 
-    console.log(percentage);
-    console.log(this.progressPercentage);
+    // console.log(percentage);
+    // console.log(this.progressPercentage);
     this.setState({progressPercentage: percentage});
   }
 
@@ -86,35 +86,34 @@ class MainPP extends Component {
 
   render() {
     console.log("inside MainPP render")
-    console.log(this.state.showModal)
+    // console.log(this.state
     return (
       <div>
       <UserConsumer>  
             {() => {
-              console.log(this.state.showModal)
-              return(
-            <div id="principalContainer">
-              <AlertModal showModal={this.state.showModal}/>
-              <div id="progressBarContainer">
-                <div id="ppImgContainer">
-                  <img src="img/sunrise.png" alt="" className="ppImgs"/>
-                  <img src="img/eat.png" alt="" className="ppImgs"/>
-                  <img src="img/finish.png" alt="" className="ppImgs"/> 
+            return(
+              <div id="principalContainer">
+                <AlertModal showModal={this.state.showModal}/>
+                <div id="progressBarContainer">
+                  <div id="ppImgContainer">
+                    <img src="img/sunrise.png" alt="" className="ppImgs"/>
+                    <img src="img/eat.png" alt="" className="ppImgs"/>
+                    <img src="img/finish.png" alt="" className="ppImgs"/> 
 
+                  </div>
+                  <div id="segmentContainer">
+                    <div className="segments"></div>
+                    <div className="segments"></div>
+                    <div className="segments" id="lunch"></div>
+                    <div className="segments"></div>
+                    <div className="segments"></div>
+                  </div>
+                  <ProgressBar id="progressBar" animated now={this.state.progressPercentage} />
+                  </div>
+                  <div id="ppBtnContainer">
+                  <Button nextBtn={this.state.nextBtn}/>
                 </div>
-                <div id="segmentContainer">
-                  <div className="segments"></div>
-                  <div className="segments"></div>
-                  <div className="segments" id="lunch"></div>
-                  <div className="segments"></div>
-                  <div className="segments"></div>
-                </div>
-                <ProgressBar id="progressBar" animated now={this.state.progressPercentage} />
-                </div>
-                <div id="ppBtnContainer">
-                <Button nextBtn={this.state.nextBtn}/>
               </div>
-            </div>
             )}
           }
           </UserConsumer>

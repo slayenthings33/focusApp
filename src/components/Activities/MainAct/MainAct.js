@@ -9,16 +9,28 @@ class MainAct extends Component {
     this.state = {
      check: false,
       nextBtn: this.props.nextBtn,
-      selected: true,
+      selected: false,
     };
     // this.toggleInput = this.toggleSelect.bind(this);
     this.toggleBorder = this.toggleBorder.bind(this);
   }
   
-toggleBorder(e) {
-  console.log(e);
-  e.target.style.border = "red 4px solid";
+// toggleBorder(e) {
+//   console.log(e);
+//   e.target.style.border = "red 4px solid";
+// }
+
+toggleBorder = () => {
+  console.log("we in this bitch")
+  console.log(this.state.selected)
+  // this.setState({selected: !selected.value});
+  this.setState(prevState => ({
+    check: !prevState.check
+  }))
+  console.log(this.state.selected)
 }
+
+// onClick={this.toggleBorder}
 
   render() {
     return (
@@ -35,7 +47,7 @@ toggleBorder(e) {
           </label>
             <label className="labelContainer">
             <input name="meditation" className="checkboxInput" type="checkbox" checked={this.state.unselected} onClick={this.addOne} onChange={this.addOne}/>
-            <img className="formImage" src="/img/meditate.png" alt=""/>
+            <img className="formImage" src="/img/meditate.png" alt="" onClick={this.toggleBorder}/>
             <span id="meditation">Meditation</span>
           </label>
           </div>

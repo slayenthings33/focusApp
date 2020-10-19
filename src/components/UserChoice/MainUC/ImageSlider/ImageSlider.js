@@ -18,14 +18,25 @@ class ImageSlider extends Component {
         "How to leave the world better than you found it"
       ],
       index: 0,
+      nextPageUrl: "/AboutUs",
+      linkTo: "Link to={/AboutUs}"
     };
   }
 
   nextImage = () => {
+    console.log(this.state.images.length)
     this.setState({
       index: this.state.index + 1
     })
   }
+
+  nextPage = () => {
+    console.log(this.state.images.length)
+    if(this.state.index == this.state.images.length) {
+      document.getElementsByClassName("ucLikeBtns").onClick=this.state.linkTo;
+    }
+  }
+
 
 
   render() {
@@ -36,12 +47,10 @@ class ImageSlider extends Component {
           <p id="ucImgSliderTitle">{this.state.imageTitles[this.state.index]}</p>  
         </div>  
         <div id="likeBtnsContainer">
-        </div>
           <img id="likeBtn" src="img/like.png" alt="" className="ucLikeBtns" onClick={this.nextImage}/>
           <img id="dislikeBtn" src="img/dislike.png" alt="" className="ucLikeBtns" onClick={this.nextImage}/>
-
-
         {/* <button class="imgSliderBtns" >Next Image</button> */}
+        </div>
       </div>
     );
   }
