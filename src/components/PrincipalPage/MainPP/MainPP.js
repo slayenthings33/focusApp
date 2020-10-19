@@ -12,10 +12,12 @@ class MainPP extends Component {
       nextBtn:this.props.nextBtn,
       totalHours: 8,
       workPeriodMin: 52,
-      totalMinsOfDay: 100,
+      // totalMinsOfDay: 8,
+      totalSecsOfDay: 8 * 10,
       breakPeriodMin: 17,
       startTime: Date.now(),
-      minsWorked: 0,
+      // minsWorked: 0,
+      secsWorked: 0,
       progressPercentage: 0,
       showModal: false,
     };
@@ -28,15 +30,21 @@ class MainPP extends Component {
   }
 
   updateMinsWorked() {
-    // console.log(this.state.startTime);
+    console.log(this.state.startTime);
     console.log((Date.now() - this.state.startTime));
-    let secondsworked = (Math.floor((Date.now() - this.state.startTime)/1000));
-    // console.log(secondsworked)
-    this.setState({minsWorked: Math.floor(this.state.minsWorked + (secondsworked/60))});
-    // console.log(this.state.minsWorked);
+    let secsWorkedSoFar = (Math.floor((Date.now() - this.state.startTime)/1000)); // 1000 cuz of Date.now returns miliseconds
+
+    // this.setState({minsWorked: Math.floor(this.state.minsWorked + (secondsworked/60))});
+    
+    this.setState(      
+      {
+        secsWorked: Math.floor(
+          secsWorkedSoFar
+        )
+      }
+    );
+
   }
-
-
   
   increment() {
     console.log('in increment did mount');
@@ -46,18 +54,22 @@ class MainPP extends Component {
   }
 
   checkIfBreak() {
-    console.log((this.state.minsWorked % 52) === 0);
-    if((this.state.minsWorked % 1) === 0) {
-      console.log('made it');
+    // console.log((this.state.minsWorked % 52) === 0);
+    // if((this.state.minsWorked % 2) === 0) {
+    //   console.log('made it');
+    //   this.setState({showModal:true})
+    //   console.log("El valor es:"+ this.state.showModal)
+    // }
+    if(this.state.progressPercentage % 10 === 0) {
       this.setState({showModal:true})
-      console.log("El valor es:"+ this.state.showModal)
+
     }
   }
   
   timer() {
     // console.log('in timer did mount');
     //setInterval(this.increment, 60000); //60000 = 1min 
-    setInterval(this.increment, 60000);
+    setInterval(this.increment, 1000);
   }
   
   componentDidMount() {
@@ -67,26 +79,21 @@ class MainPP extends Component {
 
   updateProgress() {
     // console.log('updateProgress');
-    // console.log(this.state.progressPercentage)
-    let percentage = (this.state.minsWorked/this.state.totalMinsOfDay) * 100; 
-    // console.log(percentage);
-    // console.log(this.progressPercentage);
+    console.log(this.state.progressPercentage)
+    let percentage = (this.state.secsWorked/this.state.totalSecsOfDay) * 100; 
     this.setState({progressPercentage: percentage});
   }
 
 
   progressPercentage() {
     this.updateMinsWorked();
-    return (this.state.minsWorked / this.state.totalMinsOfDay) * 100;  
+    return (this.state.secsWorked / this.state.totalSecsOfDay) * 100;  
   }
   
 
 
-
-
   render() {
-    console.log("inside MainPP render")
-    // console.log(this.state
+    // console.log("inside MainPP render")
     return (
       <div>
       <UserConsumer>  
