@@ -1,6 +1,6 @@
 
 #progressBarContainer {
-    /* border: purple 3px dotted; */
+    border: purple 3px dotted;
     width: 100%;
     display: flex;
     align-items: center;
@@ -9,7 +9,6 @@
     margin-top: 150px;
 }
 #progressBar {
-    position: relative;
     top: -110px;
     border: black 2px solid;
     box-shadow: 3px 3px;
@@ -40,16 +39,6 @@
     /* border: red dotted 1px; */
     margin-top: -75px;
 }
-#segmentContainer {
-    display: flex;
-    position: absolute;
-    top: -98px;
-    width: 68%;
-    justify-content: space-between;
-    margin: 0px 50px 0px 50px;
-    z-index: 1;
-    /* border: red dotted 2px; */
-}
 .segments {
     height: 37px;
     width: 4%;
@@ -59,10 +48,33 @@
     /* border: red dotted 3px; */
     border-radius: 1px;
 }
+#segmentContainer{
+    display: flex;
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    border: 2px dotted red;
+    justify-content: space-between;
+}
 #lunch{
     width: 12%;
     background-color: #edb2bb;
     background-image: linear-gradient(45deg, #c92841 25%, transparent 25%, transparent 75%, #c92841 75%), linear-gradient(45deg, #c92841 25%, transparent 25%, transparent 75%, #c92841 75%);
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
+}
+.hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+.show {
+    display: flex;
+    position: relative;
+    top: -200px;
+    width: 90%;
+    height: 500px;
+    justify-content: space-between;
+    /* margin: 0px 50px 0px 50px; */
+    border: yellowgreen dotted 2px;
 }

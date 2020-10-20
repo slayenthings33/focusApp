@@ -7,31 +7,31 @@ import MainPP from './MainPP/MainPP';
 
 
 class PrincipalPage extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      quote: '“Focus on being productive instead of busy.”',
       count: 0,
       nextBtn: "/GraphPage",
+      hamburgerMenu: '/img/hamburgerMenu.png',
     };
-    this.touchAdd=this.touchAdd.bind(this)
+    this.touchAdd = this.touchAdd.bind(this)
   }
   touchAdd = () => {
-      this.setState(
-        {count: this.state.count + 1},
-      )
+    this.setState(
+      { count: this.state.count + 1 },
+    )
   }
 
   render() {
     return (
-        <div id="principalPage" onClick={this.touchAdd} id="principalPage" >
-          <div id="ppHeadContainer">
-            <Head title={this.state.quote}/>
-          </div>
-          <div id="ppMainppContainer">
-            <MainPP nextBtn={this.state.nextBtn}/> 
-          </div>
+      <div id="principalPage" onClick={this.touchAdd} id="principalPage" >
+        <div id="ppHeadContainer">
+          <Head hamburgerMenu={this.state.hamburgerMenu} />
         </div>
+        <div id="ppMainppContainer">
+          <MainPP nextBtn={this.state.nextBtn} />
+        </div>
+      </div>
     );
   }
 }

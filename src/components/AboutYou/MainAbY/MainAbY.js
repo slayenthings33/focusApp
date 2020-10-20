@@ -5,7 +5,7 @@ import firebase from "firebase/app";
 // import UserContext, { UserConsumer } from '../../userContext';
 
 class MainAbY extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       arrow: "/img/continueArrow.png",
@@ -24,14 +24,14 @@ class MainAbY extends Component {
     return (
       <div className="formAbyContainer">
         {/* <UserConsumer> */}
-          <form id="aboutYouForm">
-            <p className="pageText">What you would like to be called:</p>
-            <input type='text' name='name' onChange={this.myChangeHandler}/><br/><br/>
-          </form>
-          {/* </UserConsumer> */}
-          <div id="aboutYouNextBtnContainer">
-            <Button nextBtn={this.state.nextBtn}/>
-          </div>
+        <form id="aboutYouForm">
+          <p className="pageText">What you would like to be called:</p>
+          <input type='text' name='name' onChange={this.myChangeHandler} /><br /><br />
+        </form>
+        {/* </UserConsumer> */}
+        <div id="aboutYouNextBtnContainer">
+          <Button nextBtn={this.state.nextBtn} />
+        </div>
       </div>
     );
   }

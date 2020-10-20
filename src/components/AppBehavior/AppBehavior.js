@@ -4,20 +4,20 @@ import Head from '../Head/Head'
 import MainAppBe from "./MainAppBe/MainAppBe"
 
 class AppBehavior extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       title: "",
-      nextBtn:"/PrincipalPage",
+      nextBtn: "/PrincipalPage",
     };
   }
 
   render() {
     return (
-        <div id="appBehaviorPage">
-          <Head title={this.state.title}/>
-          <MainAppBe nextBtn={this.state.nextBtn}/>
-        </div>
+      <div id="appBehaviorPage">
+        <Head title={this.state.title} />
+        <MainAppBe nextBtn={this.state.nextBtn} />
+      </div>
     );
   }
 }

@@ -116,7 +116,7 @@ export default App;
 //             p 
 //         Foot 
 //             a*2 
-//    DescriptionPage
+//    AboutUs
 //         Main
 //             p
 //         Foot

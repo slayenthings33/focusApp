@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { Redirect } from "react-router-dom";
 import './ImageSlider.css';
 
 class ImageSlider extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       images: [
@@ -18,38 +19,57 @@ class ImageSlider extends Component {
         "How to leave the world better than you found it"
       ],
       index: 0,
-      nextPageUrl: "/AboutUs",
-      linkTo: "Link to={/AboutUs}"
+      redirect: null,
+      // nextPage: '/AboutUs',
     };
   }
 
   nextImage = () => {
-    console.log(this.state.images.length)
+    // console.log(this.state.index)
+    console.log(this.state.images.length - 1)
     this.setState({
       index: this.state.index + 1
     })
+    this.nextPage();
   }
 
+  // setRedirect = () => {
+  //   console.log(this.state.index)
+  //   console.log(this.state.images.length)
+  //   this.setState({
+  //     redirect: true
+  //   })
+  // }
+  // if(this.state.index === this.state.images.length - 1) {
+  // }
+
+  // renderRedirect = () => {
+  //   if(this.state.redirect) {
+  //     return <Redirect to= '/AboutUs' />
+  //   }
+  // }
+
   nextPage = () => {
-    console.log(this.state.images.length)
-    if(this.state.index == this.state.images.length) {
-      document.getElementsByClassName("ucLikeBtns").onClick=this.state.linkTo;
+    if (this.state.index === this.state.images.length - 1) {
+      console.log("********redirect page*******")
+      this.setState({ redirect: "/AboutUs" });
     }
   }
 
-
-
   render() {
+    if (this.state.redirect) {
+      return <Redirect to={this.state.redirect} />
+    }
     return (
       <div id="carouselContainer">
         <div>
-          <img id="imgSliderImg" src={this.state.images[this.state.index]} alt=""/> 
-          <p id="ucImgSliderTitle">{this.state.imageTitles[this.state.index]}</p>  
-        </div>  
+          <img id="imgSliderImg" src={this.state.images[this.state.index]} alt="" />
+          <p id="ucImgSliderTitle">{this.state.imageTitles[this.state.index]}</p>
+        </div>
         <div id="likeBtnsContainer">
-          <img id="likeBtn" src="img/like.png" alt="" className="ucLikeBtns" onClick={this.nextImage}/>
-          <img id="dislikeBtn" src="img/dislike.png" alt="" className="ucLikeBtns" onClick={this.nextImage}/>
-        {/* <button class="imgSliderBtns" >Next Image</button> */}
+          <img id="likeBtn" src="img/like.png" alt="" className="ucLikeBtns" onClick={this.nextImage} />
+          <img id="dislikeBtn" src="img/dislike.png" alt="" className="ucLikeBtns" onClick={this.nextImage} />
+          {/* <button class="imgSliderBtns" >Next Image</button> */}
         </div>
       </div>
     );

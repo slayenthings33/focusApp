@@ -5,20 +5,20 @@ import MainUC from './MainUC/MainUC';
 import './UserChoice.css';
 
 class UserChoice extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      nextBtn:"/AboutUs",
+      nextBtn: "/AboutUs",
     };
   }
 
 
   render() {
     return (
-        <div id="userChoicePage">
-          <Head title="Are you likely to enjoy this content?"/>
-          <MainUC nextBtn={this.state.nextBtn}/>
-        </div>
+      <div id="userChoicePage">
+        <Head title="Are you likely to enjoy this content?" />
+        <MainUC nextBtn={this.state.nextBtn} />
+      </div>
     );
   }
 }

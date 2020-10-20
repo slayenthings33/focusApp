@@ -1,7 +1,12 @@
 /*
  * Head css File
 */
-
+ #hamburgerMenu {
+     position: absolute;
+     width: 13%;
+     top: 10px;
+     left: 40px;
+ }
 #headContainer{
     position: relative;
     top: -20px;
@@ -11,4 +16,5 @@
     position: relative;
     margin-top: -28px;
 }
+
 

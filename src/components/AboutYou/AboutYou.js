@@ -6,22 +6,22 @@ import UserContext from '../userContext';
 
 
 class AboutYou extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      title:"About You",
+      title: "About You",
       nextBtn: "/Activities",
       backBtn: "img/back.png"
-    };  
+    };
   }
 
-  
-  
+
+
   render() {
     return (
       <div id="aboutYouPage">
-        <Head title={this.state.title} backBtn={this.state.backBtn}/>
-        <MainAbY nextBtn= {this.state.nextBtn}/>
+        <Head title={this.state.title} backBtn={this.state.backBtn} />
+        <MainAbY nextBtn={this.state.nextBtn} />
       </div>
     );
   }

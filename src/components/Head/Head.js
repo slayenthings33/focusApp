@@ -8,14 +8,17 @@ class Head extends Component {
       title:this.props.title,
       text:this.props.text,
       backBtn: this.props.backBtn,
+      hamburgerMenu: this.props.hamburgerMenu,
     };
   }
 
   render() {
     return (
         <div id="headContainer">
-          {/* <img id="backBtn" src={this.state.backBtn} alt=""/> */}
-          <h1 className="mainFont">{this.state.title}</h1>
+          <div id="ppHeader">
+            <img src={this.state.hamburgerMenu} alt="" id="hamburgerMenu"/>
+            <h1 id="slideTitle" className="mainFont">{this.state.title}</h1>
+          </div>
           <p id="activitiesText" className="mainFont">{this.state.text}</p>
         </div>
     );

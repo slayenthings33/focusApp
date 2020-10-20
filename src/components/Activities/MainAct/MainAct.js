@@ -20,7 +20,17 @@ class MainAct extends Component {
 //   e.target.style.border = "red 4px solid";
 // }
 
-toggleBorder = () => {
+toggleBorder = (e) => {
+  if(e.target.tagName==="LABEL"){  
+    if(e.target.style.border == "3px solid black") 
+        {
+          e.target.style.border = "2px solid black"
+          e.target.style.boxShadow= "5px 5px"
+          
+        }
+  else{ e.target.style.border = "3px solid black"}
+
+}
   console.log("we in this bitch")
   console.log(this.state.selected)
   // this.setState({selected: !selected.value});
@@ -29,8 +39,6 @@ toggleBorder = () => {
   }))
   console.log(this.state.selected)
 }
-
-// onClick={this.toggleBorder}
 
   render() {
     return (
@@ -41,35 +49,35 @@ toggleBorder = () => {
               type="checkbox"
               value="checked" 
             />
-            <label className="labelContainer">
-            <img className="formImage" src="/img/yoga.png" alt="" onClick={this.toggleBorder}/>
-            <span>Yoga</span>
-          </label>
-            <label className="labelContainer">
+            <label id="yogaLabelContainer" onClick={this.toggleBorder} className="labelContainer">
+              <img className="formImage" src="/img/yoga.png" alt=""/>
+              <span>Yoga</span>
+            </label>
+            <label className="labelContainer" onClick={this.toggleBorder}>
             <input name="meditation" className="checkboxInput" type="checkbox" checked={this.state.unselected} onClick={this.addOne} onChange={this.addOne}/>
             <img className="formImage" src="/img/meditate.png" alt="" onClick={this.toggleBorder}/>
             <span id="meditation">Meditation</span>
           </label>
           </div>
           <div className="rowContainer">
-          <label className="labelContainer">
+          <label className="labelContainer" onClick={this.toggleBorder}>
             <input name="exercise" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput}/>
             <img src="/img/exercise.png" alt="" className="formImage"/>
             <span>Exercise</span>
           </label>
-          <label className="labelContainer">
+          <label className="labelContainer" onClick={this.toggleBorder}>
             <input name="podcast" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput} />
             <img src="/img/podcast.png" alt="" className="formImage"/>
             <span>Podcast</span>
           </label>
           </div>
           <div className="rowContainer">
-          <label className="labelContainer">
+          <label className="labelContainer" onClick={this.toggleBorder}>
             <input name="nap" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput} />
             <img src="/img/nap.png" alt="" className="formImage"/>
             <span>Nap</span>
           </label>
-          <label className="labelContainer">
+          <label className="labelContainer" onClick={this.toggleBorder}>
             <input className="checkboxInput" name="smartVids" type="checkbox"
               checked={this.state.unselected}
               onChange={this.toggleInput} />
@@ -78,12 +86,12 @@ toggleBorder = () => {
           </label>
           </div>
           <div className="rowContainer">
-          <label className="labelContainer">
+          <label className="labelContainer" onClick={this.toggleBorder}>
             <input name="movie" className="checkboxInput" type="checkbox" checked={this.state.unselected} onChange={this.toggleInput} />
             <img src="/img/movie.png" alt="" className="formImage" id="movieImg"/>
             <span>Movie</span>
           </label>
-        <label className="labelContainer">
+        <label className="labelContainer" onClick={this.toggleBorder}>
             <input className="checkboxInput" name="news" type="checkbox" checked={this.state.unselected}
               onChange={this.toggleInput} />
             <img src="/img/funny.png" alt="" className="formImage" id="funnyImg"/>
