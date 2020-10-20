@@ -71,6 +71,7 @@ class MainPP extends Component {
   }
 
   timer() {
+    console.log("******************2222")
     // console.log('in timer did mount');
     // setInterval(this.increment, 60000); //60000 = 1min 
     setInterval(this.increment, 1000);
@@ -79,8 +80,19 @@ class MainPP extends Component {
   componentDidMount() {
     // console.log('in compoenent did mount');
     // Lanza todo el sistema de tiempos
-    // window.addEventListener('load', this.timer());
+
   }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.hidden !== this.state.hidden) {
+      console.log("ha cambiadooooO!!!!!!")
+      //window.addEventListener('load', this.timer());
+      this.setState({ startTime: Date.now() });
+      this.timer()
+
+    }
+  }
+
 
   updateProgress() {
     // console.log('updateProgress');
@@ -106,15 +118,21 @@ class MainPP extends Component {
     console.log("renderPage")
     this.setState({ hidden: "show" })
     this.setState({ show: "hidden" })
+    console.log(this.state.hidden)
+    console.log("**************************")
+    //window.addEventListener('load', this.timer());
+    // this.timer()
   }
 
-
+  // style={{ visibility: "hidden" }}
 
   render() {
     // console.log("inside MainPP render")
     return (
       <div>
-        <button className={this.state.show} onClick={this.renderPage.bind(this)}>Click aquí</button>
+        <div id="startBtnContainer" className={this.state.show}>
+          <img id="startBtn" src="img/start.png" alt="" onClick={this.renderPage.bind(this)}></img>
+        </div>
         <div id="show">
           <UserConsumer>
             {() => {
