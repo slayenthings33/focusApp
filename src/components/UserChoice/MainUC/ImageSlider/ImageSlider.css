@@ -19,17 +19,17 @@
     display: relative;
     margin-top: -80px;
     width: 85%;
-    border: black solid 2px;
+    border: #003575 solid 4px;
     border-radius: 5px;
 }
 .ucLikeBtns {
-    width: 40%;
+    width: 60%;
+    max-width: 40%;
 }
 #likeBtnsContainer {
     display: flex;
     position: absolute;
-    top: 500px;
-    /* margin-top: 10px; */
+    top: 490px;
     justify-content: space-between;
     align-items: center;
     /* border: dotted red 2px; */

@@ -8,7 +8,7 @@
     text-align: center;
     margin:20px 10px 0 10px;
     width: 30%;
-    border: black solid 2px;
+    border: #003575 solid 2px;
     border-radius: 25px;
     justify-content: center;
     height: 80px;
@@ -35,8 +35,6 @@ form label span {
     width: 80%;
     margin: -2px 18px 6px 18px;
     padding: 4px;
-    /* min-width: 60%; */
-    /* border: black solid 1px; */
     border-radius: 20px;
     pointer-events: none;
 }

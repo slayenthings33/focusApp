@@ -62,11 +62,13 @@ class AlertModal extends Component {
               </div>
             </div>
             <div id="movieContainer" ref={this.state.movieContainer} style={{ display: "none" }}>
-              <iframe src="https://www.youtube.com/embed/Nnd5Slo02us" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              {/* <div id="doYouLike">
-                  <h3>Did you enjoy the content provided?</h3>
-                  <img src="/img/like.png" alt="" className="doYouLikeIcons"/><img src="/img/dislike.png" alt="" className="doYouLikeIcons"/>
-                </div> */}
+              <iframe id="modalMovie" src="https://www.youtube.com/embed/Nnd5Slo02us" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div id="doYouLike">
+                <h3>Did you enjoy the content provided?</h3>
+                  <div id="modalLikeBtnsContainer">
+                    <img src="/img/love.png" alt="" className="doYouLikeIcons"/><img src="/img/dontLove.png" alt="" className="doYouLikeIcons"/>
+                  </div>
+                </div>
             </div>
           </Modal.Body>
           <Modal.Footer>

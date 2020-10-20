@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import './PrincipalPage.css';
 import Head from '../Head/Head';
 import MainPP from './MainPP/MainPP';
-// import AlertModal from './AlertModal/AlertModal';
-
-
 
 class PrincipalPage extends Component {
   constructor(props) {

@@ -85,7 +85,6 @@ class MainPP extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.hidden !== this.state.hidden) {
-      console.log("ha cambiadooooO!!!!!!")
       //window.addEventListener('load', this.timer());
       this.setState({ startTime: Date.now() });
       this.timer()
@@ -119,7 +118,6 @@ class MainPP extends Component {
     this.setState({ hidden: "show" })
     this.setState({ show: "hidden" })
     console.log(this.state.hidden)
-    console.log("**************************")
     //window.addEventListener('load', this.timer());
     // this.timer()
   }

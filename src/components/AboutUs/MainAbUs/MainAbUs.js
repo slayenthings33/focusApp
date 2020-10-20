@@ -31,12 +31,12 @@ class MainAbUs extends Component {
       <div id="mainAbUsPage">
         <div id="methodBtnOptions">
           <div class="methodOptionCollumn">
-            <img src="img/miniLogoBlack.svg" id="brealaxImg" alt="" className="methodBtns" onClick={() => this.changeText("brealax")} />
-            <span>BREALAX</span>
+            <img src="img/pomodoro.png" id= "pomodoroImg" alt="" className="methodBtns" onClick={() => this.changeText("pomodoro")} />
+            <span>Pomodoro</span>
           </div>
           <div class="methodOptionCollumn">
-            <img src="img/pomodoro.png" alt="" className="methodBtns" id="pomodoroImg" onClick={() => this.changeText("pomodoro")} />
-            <span>Pomodoro</span>
+            <img src="img/miniLogoBlack.svg" alt="" className="methodBtns" id="brealaxImg"  onClick={() => this.changeText("brealax")} />
+            <span id="brealaxMethodTxt">BREALAX</span>
           </div>
           <div class="methodOptionCollumn">
             <img src="img/adjust.png" alt="" className="methodBtns" id="customizeImg" onClick={() => this.changeText("customize")} />
@@ -44,7 +44,7 @@ class MainAbUs extends Component {
           </div>
         </div>
         <div id="methodSelectTxt">
-
+          <img src="/img/logoBlack.svg" alt="" id="abUsBackgroundLogo"/>
         </div>
         <div id="abUsNextBtn">
           <Button nextBtn={this.state.nextBtn} />

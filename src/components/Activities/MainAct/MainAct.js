@@ -22,18 +22,14 @@ class MainAct extends Component {
 
 toggleBorder = (e) => {
   if(e.target.tagName==="LABEL"){  
-    if(e.target.style.border == "3px solid black") 
+    if(e.target.style.border == "4px solid #003575") 
         {
-          e.target.style.border = "2px solid black"
-          e.target.style.boxShadow= "5px 5px"
-          
+          e.target.style.border = "2px solid #003575"          
         }
-  else{ e.target.style.border = "3px solid black"}
+  else{ e.target.style.border = "4px solid #003575"}
 
 }
-  console.log("we in this bitch")
-  console.log(this.state.selected)
-  // this.setState({selected: !selected.value});
+
   this.setState(prevState => ({
     check: !prevState.check
   }))

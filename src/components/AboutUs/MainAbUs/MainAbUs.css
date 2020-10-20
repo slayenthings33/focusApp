@@ -9,12 +9,11 @@
     flex-direction: column;
 }
 .methodBtns {
-    width: 70%;
+    width: 65%;
     /* padding-top: 10px; */
-
 }
-#methodBtnOptions {
 
+#methodBtnOptions {
     /* border: red dotted 1px; */
     display: flex;
     justify-content: center;
@@ -38,10 +37,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: black solid 2px;
+    border: #003575 solid 2px;
     height: 90px;
     border-radius: 20px;
-    box-shadow: 5px 5px;
+    box-shadow: 5px 5px #003575;
+}
+.methodOptionCollumn:active {
+    position: relative;
+    box-shadow: 0px 0px;
+    top: 5px;
+    left: 5px;
 }
 #methodSelectTxt {
     position: relative;
@@ -56,4 +61,14 @@
     position: absolute;
     top: 500px;
     left: 125px;
+}
+#abUsBackgroundLogo {
+    position: relative;
+    top: 50px;
+    width: 130%;
+    opacity: 0.2;
+    left: -50px;
+}
+#brealaxMethodTxt {
+    padding: 0px 6px 0px 6px;
 }
