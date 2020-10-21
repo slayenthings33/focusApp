@@ -16,3 +16,7 @@
     top: 375px;
     right: 150px;
 }
+#appBehaviorText {
+    font-weight: bold;
+    color: #003575;
+}

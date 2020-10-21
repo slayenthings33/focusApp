@@ -11,3 +11,7 @@
     position: relative;
     top: -17px;
 }
+#aboutYouPageText {
+    font-weight: bold;
+    color: #003575;
+}

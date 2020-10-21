@@ -16,5 +16,8 @@
     position: relative;
     margin-top: -28px;
 }
-
+#activitiesText {
+    color: #57e0ff;
+    font-weight: bold;
+}
 

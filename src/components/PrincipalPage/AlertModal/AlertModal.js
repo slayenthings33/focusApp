@@ -41,7 +41,7 @@ class AlertModal extends Component {
       <div id="alertModalContainer">
         <Modal show={this.state.showModal} aria-labelledby="contained-modal-title-vcenter" size="xl" centered >
           <Modal.Header closeButton onClick={this.handleCloseModal} >
-            <Modal.Title class="emojiText">Break Time!</Modal.Title>
+            <Modal.Title id="modalTitle" class="emojiText">Break Time!</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div id="emojiBreakContainer">
@@ -64,7 +64,7 @@ class AlertModal extends Component {
             <div id="movieContainer" ref={this.state.movieContainer} style={{ display: "none" }}>
               <iframe id="modalMovie" src="https://www.youtube.com/embed/Nnd5Slo02us" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               <div id="doYouLike">
-                <h3>Did you enjoy the content provided?</h3>
+                <h3 id="ucVideoText">Did you enjoy the content provided?</h3>
                   <div id="modalLikeBtnsContainer">
                     <img src="/img/love.png" alt="" className="doYouLikeIcons"/><img src="/img/dontLove.png" alt="" className="doYouLikeIcons"/>
                   </div>

@@ -55,10 +55,10 @@ class MainCA extends Component {
     return (
       <div id="formCaContainer">
         <form id="caForm">
-          <p className="pageText">Email:</p>
+          <p className="pageText" id="caLoginText">Email:</p>
           <input type='text' id="email" name='email' className="caInput" onChange={this.changeEmail}/><br/><br/>
           <div id="passwordContainer">
-            <p className="pageText">Password:</p>
+            <p className="pageText" id="caLoginText">Password:</p>
             <input type='password' name='password' className="caInput" onChange={this.changePass}/> <br/>
           </div>
         <div class="haveAccountContainer">

@@ -32,15 +32,15 @@ class MainAbUs extends Component {
         <div id="methodBtnOptions">
           <div class="methodOptionCollumn">
             <img src="img/pomodoro.png" id= "pomodoroImg" alt="" className="methodBtns" onClick={() => this.changeText("pomodoro")} />
-            <span>Pomodoro</span>
+            <span className="methodButtonSelectText">Pomodoro</span>
           </div>
           <div class="methodOptionCollumn">
             <img src="img/miniLogoBlack.svg" alt="" className="methodBtns" id="brealaxImg"  onClick={() => this.changeText("brealax")} />
-            <span id="brealaxMethodTxt">BREALAX</span>
+            <span className="methodButtonSelectText" id="brealaxMethodTxt">BREALAX</span>
           </div>
           <div class="methodOptionCollumn">
             <img src="img/adjust.png" alt="" className="methodBtns" id="customizeImg" onClick={() => this.changeText("customize")} />
-            <span>Customize</span>
+            <span className="methodButtonSelectText">Customize</span>
           </div>
         </div>
         <div id="methodSelectTxt">

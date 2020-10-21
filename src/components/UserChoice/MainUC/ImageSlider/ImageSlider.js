@@ -33,25 +33,8 @@ class ImageSlider extends Component {
     this.nextPage();
   }
 
-  // setRedirect = () => {
-  //   console.log(this.state.index)
-  //   console.log(this.state.images.length)
-  //   this.setState({
-  //     redirect: true
-  //   })
-  // }
-  // if(this.state.index === this.state.images.length - 1) {
-  // }
-
-  // renderRedirect = () => {
-  //   if(this.state.redirect) {
-  //     return <Redirect to= '/AboutUs' />
-  //   }
-  // }
-
   nextPage = () => {
     if (this.state.index === this.state.images.length - 1) {
-      console.log("********redirect page*******")
       this.setState({ redirect: "/AboutUs" });
     }
   }

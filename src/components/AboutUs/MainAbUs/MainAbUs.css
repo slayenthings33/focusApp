@@ -56,6 +56,8 @@
     /* border: red dotted 2px; */
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
+    font-weight: bold;
+    color: #003575;
 }
 #abUsNextBtn {
     position: absolute;
@@ -70,5 +72,9 @@
     left: -50px;
 }
 #brealaxMethodTxt {
-    padding: 0px 6px 0px 6px;
+    padding: 0px 0px 0px 4px;
+}
+.methodButtonSelectText {
+    font-weight: bold;
+    color: #003575;
 }

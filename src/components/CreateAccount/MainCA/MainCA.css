@@ -46,3 +46,7 @@
     position: relative;
     top: -30px;
 }
+#caLoginText {
+    color: #003575;
+    font-weight: bold;
+}
