@@ -25,14 +25,15 @@ import {FirebaseAppProvider} from 'reactfire';
 
 
 function App() {
-  // const [context, setContext]=useState("martitasea");
-
+  const context = React.createContext();
+  const Consumer= context.Consumer;
+  const Provider= context.Provider;
   return (
     <div className="App">
       <BrowserRouter>
         <Switch>
           <FirebaseAppProvider firebaseConfig={firebaseConfig}>  
-            <UserProvider>  
+            <Provider value={{name:"",activities:[""], likedContent:[""], method:"", workHoursToday:"", mood:""}}>  
               <Route exact path="/" link ={<Link to='/WelcomePage'>Welcome Page</Link>}>
                 <WelcomePage title="Welcome to"/> 
               </Route>
@@ -60,7 +61,7 @@ function App() {
               <Route exact path="/GraphPage" link ={<Link to='/GraphPage'>Graph Page</Link>}>
                 <GraphPage/> 
               </Route>
-            </UserProvider>
+            </Provider>
           </FirebaseAppProvider>  
         </Switch> 
     </BrowserRouter>
@@ -70,7 +71,7 @@ function App() {
 }
 
 export default App;
-
+export {Provider};
 
 
 

@@ -61,7 +61,7 @@ class MainCA extends Component {
             <p className="pageText" id="caLoginText">Password:</p>
             <input type='password' name='password' className="caInput" onChange={this.changePass}/> <br/>
           </div>
-        <div class="haveAccountContainer">
+        <div className="haveAccountContainer">
           <span id="haveAccount?">Already have an account ? </span><span id="signIn">Sign in</span>
         </div>
         </form>

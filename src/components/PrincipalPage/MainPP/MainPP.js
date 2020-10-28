@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './MainPP.css';
 import ProgressBar from 'react-bootstrap/ProgressBar'
-import Button from '../../Button/Button'
 import { UserConsumer } from '../../userContext';
 import AlertModal from '../AlertModal/AlertModal';
 
@@ -118,14 +117,9 @@ class MainPP extends Component {
     this.setState({ hidden: "show" })
     this.setState({ show: "hidden" })
     console.log(this.state.hidden)
-    //window.addEventListener('load', this.timer());
-    // this.timer()
   }
 
-  // style={{ visibility: "hidden" }}
-
   render() {
-    // console.log("inside MainPP render")
     return (
       <div>
         <div id="startBtnContainer" className={this.state.show}>
