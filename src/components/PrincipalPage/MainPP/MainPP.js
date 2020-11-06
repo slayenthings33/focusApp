@@ -70,7 +70,6 @@ class MainPP extends Component {
   }
 
   timer() {
-    console.log("******************2222")
     // console.log('in timer did mount');
     // setInterval(this.increment, 60000); //60000 = 1min 
     setInterval(this.increment, 1000);
